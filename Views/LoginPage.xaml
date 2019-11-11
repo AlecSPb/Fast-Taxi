@@ -1,0 +1,92 @@
+﻿<Window x:Class="Babat_Taxi.Views.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Babat_Taxi.Views"
+        mc:Ignorable="d"
+        Title="LoginPage" Height="800" Width="1400"
+        MinHeight="800" MinWidth="1300"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/DictionaryLogin.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid x:Name="MainGrid" Background="{StaticResource LoginBackgroundGradient}">
+
+        <Border x:Name="PanelBorder" Margin="100,50">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="100" Direction="-180" RenderingBias="Quality" ShadowDepth="2"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="LeftSidePanel" Grid.Column="0" CornerRadius="25,0,0,25" Background="{StaticResource LeftSidePanelGradient}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                            <Line X1="300" Stroke="White"
+                              HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                              StrokeThickness="2" Margin="0,0,0,10"/>
+                            <Label Content="BABAT TAXI"
+                               VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                               FontSize="70"  FontWeight="Light" Foreground="White"/>
+                            <Line X1="300" Stroke="White"
+                              HorizontalAlignment="Center" VerticalAlignment="top"
+                              StrokeThickness="2" Margin="0,10,0,0"/>
+                        </StackPanel>
+
+
+                    </Grid>
+                </Border>
+
+                <Border x:Name="RightSidePanel" Grid.Column="1" CornerRadius="0,25,25,0" Background="{StaticResource RightSidePanelGradient}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                            <TextBlock Text="LOGIN"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   FontSize="30"  FontWeight="Light" Foreground="White"/>
+
+                            <Line Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
+                              HorizontalAlignment="Center" VerticalAlignment="Top"
+                              StrokeThickness="2"/>
+                        </StackPanel>
+                        <TextBox Grid.Row="1" Width="450" Height="40" FontSize="25" Foreground="White" BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2" />
+                        <PasswordBox Grid.Row="2" Width="450" Height="40" FontSize="25" Foreground="White" BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2" />
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Width="150" Height="50" FontWeight="Light" Content="Login"   Background="{StaticResource ButtonGradient}" BorderThickness="0" Foreground="White" Margin="0,0,90,0"/>
+                            <Button Width="150" Height="50" FontWeight="Light" Content="Sign Up" Background="{StaticResource ButtonGradient}" BorderThickness="0" Foreground="White" />
+
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+       
+    </Grid>
+</Window>

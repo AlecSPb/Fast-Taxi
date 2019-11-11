@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Babat_Taxi">
+
+
+    <LinearGradientBrush x:Key="LoginBackgroundGradient" StartPoint="0.5,-0.2" EndPoint="0.5,1">
+        <GradientStopCollection>
+            <GradientStop Offset="0" Color="Black"/>
+            <GradientStop Offset="0.5" Color="#355c55"/>
+            <GradientStop Offset="1" Color="#84c2b7"/>
+        </GradientStopCollection>
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="RightSidePanelGradient" StartPoint="1,0" EndPoint="0,1">
+        <GradientStopCollection>
+            <GradientStop Offset="0" Color="#778491"/>
+            <GradientStop Offset="1" Color="#26292e"/>
+        </GradientStopCollection>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LeftSidePanelGradient" StartPoint="0,0" EndPoint="1,1">
+        <GradientStopCollection>
+            <GradientStop Offset="0" Color="#4fe0c6"/>
+            <GradientStop Offset="1" Color="#11362f"/>
+        </GradientStopCollection>
+    </LinearGradientBrush>
+    
+    
+    
+    <RadialGradientBrush x:Key="ButtonGradient" RadiusX="12">
+        <GradientStopCollection>
+            <GradientStop Offset="0" Color="#46ab9e"/>
+            <GradientStop Offset="1" Color="#2e877b"/>
+        </GradientStopCollection>
+    </RadialGradientBrush>
+    <BitmapImage x:Key="CarLogo" UriSource="../Images/carlogo.png"></BitmapImage>
+</ResourceDictionary>

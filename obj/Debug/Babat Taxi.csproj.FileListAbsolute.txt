@@ -1,0 +1,27 @@
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Babat Taxi.exe.config
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Babat Taxi.exe
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Babat Taxi.pdb
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\MaterialDesignColors.dll
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Newtonsoft.Json.dll
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\MaterialDesignColors.pdb
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Newtonsoft.Json.xml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\App.g.cs
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi_MarkupCompile.cache
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi_MarkupCompile.lref
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.g.resources
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat_Taxi.Properties.Resources.resources
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.csproj.GenerateResource.cache
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.csproj.CopyComplete
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.exe
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.pdb
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Views\LoginPage.g.cs
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Views\LoginPage.baml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Views\MainMap.g.cs
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Views\MainMap.baml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\App.baml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Resources\DictionaryLogin.baml
