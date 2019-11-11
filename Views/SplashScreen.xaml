@@ -1,0 +1,49 @@
+﻿<Window x:Class="Babat_Taxi.Views.MySplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Babat_Taxi.Views"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Title="SplashScreen" Height="300" Width="500">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/DictionaryLogin.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource SplashScreenGradient}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="47*"/>
+
+
+            <RowDefinition Height="auto" MinHeight="10"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="191*"/>
+            <ColumnDefinition Width="59*"/>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Text="BABAT TAXI 2019" Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Height="54" Margin="34,56,66,10" Width="282"></TextBlock>
+        <TextBlock Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Height="54" Margin="34,16,66,53" Width="282" Grid.Row="1">
+            By Ulvi Bashir
+
+        </TextBlock>
+        <TextBlock Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="12" Height="29" Margin="198,0,52,5" Width="132" Grid.Row="2">
+            Copyright © 2019
+
+        </TextBlock>
+
+
+        <ProgressBar BorderBrush="DarkGray" x:Name="Progbar" Grid.Row="3" Minimum="0" Maximum="100" Background="{StaticResource RightSidePanelGradient}" Style="{x:Null}" Foreground="{StaticResource LeftSidePanelGradient}" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

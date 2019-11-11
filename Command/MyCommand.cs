@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Babat_Taxi.Command
 {
-    public class Command : ICommand
+    public class MyCommand : ICommand
     {
         public event EventHandler CanExecuteChanged
         {
@@ -18,7 +18,7 @@ namespace Babat_Taxi.Command
         private readonly Predicate<object> _canExecute;
         private readonly Action<object> _execute;
 
-        public Command(Action<object> execute, Predicate<object> canExecute = null)
+        public MyCommand(Action<object> execute, Predicate<object> canExecute = null)
         {
             _execute = execute ?? throw new ArgumentNullException(nameof(execute));
             _canExecute = canExecute;

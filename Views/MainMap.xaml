@@ -8,6 +8,6 @@
         Title="MainMap" Height="450" Width="800"
         xmlns:map ="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF">
     <Grid>
-        <map:Map></map:Map>
+        <map:Map Name="RoadMap" CredentialsProvider="{Binding Provider}" Center="40.409264, 49.867092" ZoomLevel="12" ></map:Map>
     </Grid>
 </Window>

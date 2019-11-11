@@ -24,6 +24,9 @@ namespace Babat_Taxi.Views
         {
             InitializeComponent();
             this.DataContext = new LoginPageViewModel();
+            
         }
+
+       
     }
 }

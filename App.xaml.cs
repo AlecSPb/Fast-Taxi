@@ -16,7 +16,7 @@ namespace Babat_Taxi
     {
         public App()
         {
-            this.MainWindow = new LoginPage();
+            this.MainWindow = new MySplashScreen();
             this.MainWindow.Show();
         }
 
