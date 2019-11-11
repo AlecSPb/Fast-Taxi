@@ -13,14 +13,28 @@ namespace Babat_Taxi.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
+
+
+        #region OnPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged([CallerMemberName]string property = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
+        #endregion
 
-        MyCommand LoginCommand;
 
+        #region Commands
+        public MyCommand LoginCommand { get; set; }
+
+        #endregion
+
+
+        public string EmailTxtBox { get; set; }
+        public string PasswordTxtBox { get; set; }
+
+        public Visibility IsFocusPassword { get; set; }
+        public Visibility IsFocusEmail { get; set; }
 
 
         public LoginPageViewModel()
@@ -28,10 +42,13 @@ namespace Babat_Taxi.ViewModels
             LoginCommand = new MyCommand(LoginCommandExecute);
         }
 
-     public void LoginCommandExecute(object obj)
+        private void LoginCommandExecute(object obj)
         {
-           MessageBox.Show("Test");
+            MessageBox.Show("Test");
         }
-        
+        private bool LoginCommandCanExecute(object obj)
+        {
+            return true;
+        }
     }
 }

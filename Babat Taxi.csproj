@@ -90,6 +90,8 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Entitiy.cs" />
+    <Compile Include="Repository\DataFromServer.cs" />
+    <Compile Include="Repository\IDataFromServer.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\MyMapViewModel.cs" />
     <Compile Include="Views\LoginPage.xaml.cs">
@@ -130,7 +132,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repository\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>

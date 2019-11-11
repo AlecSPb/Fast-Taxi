@@ -27,6 +27,9 @@ namespace Babat_Taxi.Views
             
         }
 
-       
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

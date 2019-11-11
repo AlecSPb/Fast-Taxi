@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Babat_Taxi.Views"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainMap" Height="450" Width="800"
         xmlns:map ="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF">
     <Grid>

@@ -1,4 +1,5 @@
-﻿using Microsoft.Maps.MapControl.WPF;
+﻿using Babat_Taxi.Repository;
+using Microsoft.Maps.MapControl.WPF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,19 +20,15 @@ namespace Babat_Taxi.ViewModels
         }
 
 
-        public ApplicationIdCredentialsProvider Provider { get; set; }
-        //private DispatcherTimer timer;
 
+
+        public ApplicationIdCredentialsProvider Provider { get; set; }
+
+        
 
         public MyMapViewModel()
         {
             Provider = new ApplicationIdCredentialsProvider("Ao_jQSDX1s9uPT2kRQF7n1gALuQymIe2AgPyUVwQUq8i4Sa1m-E1GJrrH995z2ND");
-
-            //timer = new DispatcherTimer();
-            //timer.Interval = new TimeSpan(0, 0, 60);
-            //timer.Tick += Timer_Tick;
-            //timer.Start();
-            
         }
 
         private void Timer_Tick(object sender, EventArgs e)

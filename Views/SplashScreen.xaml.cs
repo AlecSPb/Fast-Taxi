@@ -35,7 +35,7 @@ namespace Babat_Taxi.Views
             if (Progbar.Value == 100)
             {
                 timer.Stop();
-                var loginPage = new LoginPage();
+                var loginPage = new MainMap();
                 loginPage.Show();
                 this.Close();
             }

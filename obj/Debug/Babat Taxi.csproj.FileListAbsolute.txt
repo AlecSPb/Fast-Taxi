@@ -42,3 +42,48 @@ D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\sv\Xceed.Wpf.AvalonDock.
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Views\SplashScreen.g.cs
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Views\SplashScreen.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Babat Taxi.exe.config
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Babat Taxi.exe
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Babat Taxi.pdb
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\MaterialDesignColors.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\LoginPage.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\MainMap.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\SplashScreen.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\App.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi_MarkupCompile.cache
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi_MarkupCompile.lref
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\App.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Resources\DictionaryLogin.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\LoginPage.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\MainMap.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\SplashScreen.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.g.resources
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat_Taxi.Properties.Resources.resources
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.csproj.GenerateResource.cache
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.csproj.CopyComplete
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.exe
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.pdb
