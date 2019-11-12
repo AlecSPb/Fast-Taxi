@@ -1,4 +1,4 @@
-﻿namespace Babat_Taxi.Repository
+﻿namespace Babat_Taxi.Services
 {
     public interface IDataFromServer
     {

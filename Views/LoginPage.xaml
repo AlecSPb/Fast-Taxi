@@ -63,27 +63,59 @@
                 <Border x:Name="RightSidePanel" Grid.Column="1" CornerRadius="0,25,25,0" Background="{StaticResource RightSidePanelGradient}">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="2*"/>
                             <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="3*"/>
                         </Grid.RowDefinitions>
 
-                        
-                        <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid  Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
 
-                            <TextBlock Text="LOGIN"
+
+                            <StackPanel Grid.Column="0" Orientation="Vertical"  VerticalAlignment="Center">
+
+                                <Button Template="{StaticResource Login_and_SingUp}" Content="LOGIN"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                                   FontSize="30"  FontWeight="Light" Foreground="White"/>
+                                   FontSize="30"  FontWeight="Light"/>
 
-                            <Line Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
+
+
+
+
+
+                                <Line Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
                               HorizontalAlignment="Center" VerticalAlignment="Top"
                               StrokeThickness="2"/>
-                        </StackPanel>
+                            </StackPanel>
+                            
+                            
+                            
+                            
+                            
+                            
+                            <StackPanel Grid.Column="1" Orientation="Vertical"  VerticalAlignment="Center">
+
+                                <Button Template="{StaticResource Login_and_SingUp}" Content="SIGN UP"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   FontSize="30"  FontWeight="Light"/>
+
+                                <Line Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
+                              HorizontalAlignment="Center" VerticalAlignment="Top"
+                              StrokeThickness="2"/>
+                            </StackPanel>
 
 
+                        </Grid>
 
-                        <Grid x:Name="Emailbox" Grid.Row="1">
+
+                        <Grid Grid.Row="1" x:Name="UserControlCommon">
+                            <ContentControl Content="{Binding UserControl_log_and_signup}"/>
+                        </Grid>
+
+
+                        <!--<Grid x:Name="Emailbox" Grid.Row="1">
                             <TextBlock Width="450" Height="40" FontSize="25" Foreground="DarkGray" Text="Email" Visibility="{Binding IsFocusEmail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                              
                             </TextBlock>
@@ -116,7 +148,9 @@
                             <Button Grid.Column="0" Template="{StaticResource LoginPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Login" Command="{Binding LoginCommand}"/>
                             <Button Grid.Column="1" Template="{StaticResource LoginPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Sign Up" />
 
-                        </Grid>
+                        </Grid>-->
+                        
+                        
                     </Grid>
                 </Border>
             </Grid>

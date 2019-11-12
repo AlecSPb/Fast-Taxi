@@ -76,10 +76,36 @@
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="20"/>
+
 
     </Style>
-    
-    
+
+    <ControlTemplate x:Key="Login_and_SingUp" TargetType="Button">
+        <Border x:Name="btnBorder" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" CornerRadius="10" BorderThickness="0" Background="Transparent" BorderBrush="Transparent">
+
+        
+
+            <ContentPresenter x:Name="Content" RecognizesAccessKey="True"
+                    Content="{TemplateBinding Content}"
+                    Margin="{TemplateBinding Margin}"
+                    VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}" />
+            
+            
+        </Border>
+
+
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+               
+                <Setter Property="Foreground" Value="#84c2b7"/>
+
+            </Trigger>
+        </ControlTemplate.Triggers>
+
+    </ControlTemplate>
     
     
     <BitmapImage x:Key="CarLogo" UriSource="../Images/carlogo.png"></BitmapImage>

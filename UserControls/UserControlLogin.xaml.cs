@@ -1,6 +1,4 @@
-﻿using Babat_Taxi.UserControls;
-using Babat_Taxi.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,21 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Babat_Taxi.Views
+namespace Babat_Taxi.UserControls
 {
     /// <summary>
-    /// Interaction logic for LoginPage.xaml
+    /// Interaction logic for UserControlLogin.xaml
     /// </summary>
-    public partial class LoginPage : Window
+    public partial class UserControlLogin : UserControl
     {
-        public LoginPage()
+
+
+
+
+        public UserControlLogin()
         {
             InitializeComponent();
-            this.DataContext = new LoginPageViewModel();
         }
-
-        
     }
 }

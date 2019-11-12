@@ -1,4 +1,5 @@
 ﻿using Babat_Taxi.Command;
+using Babat_Taxi.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,10 +37,14 @@ namespace Babat_Taxi.ViewModels
         public Visibility IsFocusPassword { get; set; }
         public Visibility IsFocusEmail { get; set; }
 
+        public Grid UserControl_log_and_signup { get; set; }
 
         public LoginPageViewModel()
         {
             LoginCommand = new MyCommand(LoginCommandExecute);
+            UserControl_log_and_signup = new Grid();
+            UserControlLogin userControlLogin = new UserControlLogin();
+            UserControl_log_and_signup.Children.Add(userControlLogin);
         }
 
         private void LoginCommandExecute(object obj)

@@ -8,7 +8,11 @@
         WindowStartupLocation="CenterScreen"
         Title="MainMap" Height="450" Width="800"
         xmlns:map ="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF">
-    <Grid>
-        <map:Map Name="RoadMap" CredentialsProvider="{Binding Provider}" Center="40.409264, 49.867092" ZoomLevel="12" ></map:Map>
+    <Grid> <!-- I can use provider binding, works but shows error -->
+        <map:Map Name="RoadMap" CredentialsProvider="Ao_jQSDX1s9uPT2kRQF7n1gALuQymIe2AgPyUVwQUq8i4Sa1m-E1GJrrH995z2ND"
+                 Center="40.409264, 49.867092" ZoomLevel="12" >
+            
+            
+        </map:Map>
     </Grid>
 </Window>

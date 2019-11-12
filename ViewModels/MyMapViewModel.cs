@@ -1,8 +1,9 @@
-﻿using Babat_Taxi.Repository;
+﻿using Babat_Taxi;
 using Microsoft.Maps.MapControl.WPF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -28,7 +29,8 @@ namespace Babat_Taxi.ViewModels
 
         public MyMapViewModel()
         {
-            Provider = new ApplicationIdCredentialsProvider("Ao_jQSDX1s9uPT2kRQF7n1gALuQymIe2AgPyUVwQUq8i4Sa1m-E1GJrrH995z2ND");
+            
+            Provider = new ApplicationIdCredentialsProvider(ConfigurationManager.AppSettings["BingKey"]);
         }
 
         private void Timer_Tick(object sender, EventArgs e)

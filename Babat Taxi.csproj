@@ -48,6 +48,7 @@
       <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -90,8 +91,14 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Entitiy.cs" />
-    <Compile Include="Repository\DataFromServer.cs" />
-    <Compile Include="Repository\IDataFromServer.cs" />
+    <Compile Include="Services\DataFromServer.cs" />
+    <Compile Include="Services\IDataFromServer.cs" />
+    <Compile Include="UserControls\PlaceHolderTextBox.xaml.cs">
+      <DependentUpon>PlaceHolderTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlLogin.xaml.cs">
+      <DependentUpon>UserControlLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\MyMapViewModel.cs" />
     <Compile Include="Views\LoginPage.xaml.cs">
@@ -131,11 +138,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Resources\DictionaryLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PlaceHolderTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Babat_Taxi.Repository
+namespace Babat_Taxi.Services
 {
     public class DataFromServer : IDataFromServer
     {

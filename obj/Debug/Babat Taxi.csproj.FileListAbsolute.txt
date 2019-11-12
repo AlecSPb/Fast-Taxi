@@ -87,3 +87,9 @@ C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.csproj.GenerateResour
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.csproj.CopyComplete
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.exe
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.pdb
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlLogin.g.cs
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlLogin.baml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\PlaceHolderTextBox.g.cs
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\PlaceHolderTextBox.baml
