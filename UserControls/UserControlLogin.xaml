@@ -21,33 +21,34 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid x:Name="Emailbox" Grid.Row="0">
-                            <TextBlock Width="450" Height="40" FontSize="25" Foreground="DarkGray" Text="Email" Visibility="{Binding IsFocusEmail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                             
-                            </TextBlock>
-                            <TextBox  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" Foreground="White"
-                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2">
-                               
-                            </TextBox>
+            <local:PlaceHolderTextBox  PlaceHolderText="Email" Text="{Binding EmailTxtBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" Foreground="White"
+                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2"/>
             
-                        </Grid>
+        </Grid>
 
-                        
 
-                        <Grid x:Name="Passwordbox"  Grid.Row="1">
-                            <TextBlock Width="450" Height="40" FontSize="25" Foreground="DarkGray" Text="Password" Visibility="{Binding IsFocusPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                                
-                                    
-                            </TextBlock>
-                        <PasswordBox  Width="450" Height="40" FontSize="25" Foreground="White" BorderBrush="White"
-                                      Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2" />
-                        </Grid>
-                        
-                        
-                        
-                        <StackPanel x:Name="Buttons" Grid.Row="2" VerticalAlignment="Center">
-                            
-                            <Button Grid.Column="0" Template="{StaticResource LoginPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Login" Command="{Binding LoginCommand}"/>
-                           
-                        </StackPanel>
+
+        
+        
+        
+        <Grid x:Name="Passwordbox"  Grid.Row="1">
+            <local:PlaceHolderTextBox PlaceHolderText="Password"  x:Name="txtPassword"  Width="450" Height="40" FontSize="25" Foreground="White"
+                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2"/>
+        </Grid>
+
+
+        
+        
+        
+        
+        
+        
+        
+
+        <StackPanel x:Name="Buttons" Grid.Row="2" VerticalAlignment="Center">
+
+            <Button Grid.Column="0" Template="{StaticResource LoginPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Login" Command="{Binding LoginCommand}"/>
+
+        </StackPanel>
     </Grid>
 </UserControl>

@@ -29,7 +29,7 @@ namespace Babat_Taxi.Views
             timer.Start();
             InitializeComponent();
         }
-
+            
         private void Timer_Tick(object sender, EventArgs e)
         {
             if (Progbar.Value == 100)

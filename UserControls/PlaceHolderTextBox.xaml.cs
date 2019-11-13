@@ -35,6 +35,8 @@ namespace Babat_Taxi.UserControls
 
 
 
+
+
         public bool AcceptsReturn
         {
             get { return (bool)GetValue(AcceptsReturnProperty); }
@@ -44,6 +46,8 @@ namespace Babat_Taxi.UserControls
         // Using a DependencyProperty as the backing store for AcceptsReturn.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty AcceptsReturnProperty =
             DependencyProperty.Register("AcceptsReturn", typeof(bool), typeof(PlaceHolderTextBox));
+
+
 
 
 
@@ -59,6 +63,7 @@ namespace Babat_Taxi.UserControls
 
 
 
+    
 
 
         public PlaceHolderTextBox()

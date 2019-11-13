@@ -99,6 +99,9 @@
     <Compile Include="UserControls\UserControlLogin.xaml.cs">
       <DependentUpon>UserControlLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlSignUp.xaml.cs">
+      <DependentUpon>UserControlSignUp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\MyMapViewModel.cs" />
     <Compile Include="Views\LoginPage.xaml.cs">
@@ -149,6 +152,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserControlLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlSignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

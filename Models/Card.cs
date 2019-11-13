@@ -11,5 +11,6 @@ namespace Babat_Taxi.Models
         public string CardNumber { get; set; }
         public string CCV { get; set; }
         public DateTime ExpireDate { get; set; }
+
     }
 }

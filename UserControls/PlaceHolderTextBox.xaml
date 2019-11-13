@@ -9,29 +9,36 @@
              Name="Control">
     <Grid>
 
-        <TextBlock Text="{Binding ElementName=Control, Path=PlaceHolderText}" Margin="5,0,0,0" Foreground="red" >
+
+        <TextBlock Text="{Binding ElementName=Control, Path=PlaceHolderText}" Margin="5,0,0,0" Foreground="DarkGray">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Visibility"  Value="Collapsed"/>
+                    <Setter Property="Visibility" Value="Collapsed"/>
+
+
 
                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text, ElementName=PlaceHolderText}" Value="">
+                        <DataTrigger Binding="{Binding Text, ElementName=PlaceHoldertxtbox}" Value="">
                             <Setter Property="Visibility" Value="Visible"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        
-        
-        
-        
-        <TextBox x:Name="PlaceHolderTxtBx"
-                 
+        <TextBox Name="PlaceHoldertxtbox"
                  Background="{Binding ElementName=Control, Path=Background}"
                  Width="{Binding ElementName=Control, Path=Width}"
+                 Height="{Binding ElementName=Control, Path=Height}"
+                 FontSize="{Binding ElementName=Control, Path=FontSize}"
                  Text="{Binding ElementName=Control, Path=Text}"
-                 AcceptsReturn="{Binding ElementName=Control, Path=AcceptsReturn}">
+                 AcceptsReturn="{Binding ElementName=Control, Path=AcceptsReturn}"
+                 BorderBrush="{Binding ElementName=Control, Path=BorderBrush}"
+                 
+                 Style="{Binding ElementName=Control,  Path=Style}"
+                 BorderThickness="{Binding ElementName=Control, Path=BorderThickness}"
+                 Foreground="{Binding ElementName=Control, Path=Foreground}">
+
+            
             
         </TextBox>
 

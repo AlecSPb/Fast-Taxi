@@ -9,6 +9,7 @@
         MinHeight="800" MinWidth="1300"
         WindowStartupLocation="CenterScreen"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local1="clr-namespace:Babat_Taxi.UserControls"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -74,17 +75,12 @@
                             </Grid.ColumnDefinitions>
 
 
-                            <StackPanel Grid.Column="0" Orientation="Vertical"  VerticalAlignment="Center">
+                            <StackPanel x:Name="LOGIN_BTN" Grid.Column="0" Orientation="Vertical"  VerticalAlignment="Center">
 
                                 <Button Template="{StaticResource Login_and_SingUp}" Content="LOGIN"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
                                    FontSize="30"  FontWeight="Light"/>
-
-
-
-
-
-
+                                
                                 <Line Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
                               HorizontalAlignment="Center" VerticalAlignment="Top"
                               StrokeThickness="2"/>
@@ -93,9 +89,7 @@
                             
                             
                             
-                            
-                            
-                            <StackPanel Grid.Column="1" Orientation="Vertical"  VerticalAlignment="Center">
+                            <StackPanel x:Name="SIGNUP_BTN" Grid.Column="1" Orientation="Vertical"  VerticalAlignment="Center">
 
                                 <Button Template="{StaticResource Login_and_SingUp}" Content="SIGN UP"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
