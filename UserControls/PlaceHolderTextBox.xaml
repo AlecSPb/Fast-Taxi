@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Babat_Taxi.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Name="Control">
@@ -36,10 +37,10 @@
                  
                  Style="{Binding ElementName=Control,  Path=Style}"
                  BorderThickness="{Binding ElementName=Control, Path=BorderThickness}"
-                 Foreground="{Binding ElementName=Control, Path=Foreground}">
+                 Foreground="{Binding ElementName=Control, Path=Foreground}"
+                 materialDesign:HintAssist.Hint="Hey, that's pretty good!">
 
-            
-            
+
         </TextBox>
 
     </Grid>

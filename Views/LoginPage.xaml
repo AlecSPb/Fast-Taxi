@@ -79,11 +79,11 @@
 
                                 <Button Template="{StaticResource Login_and_SingUp}" Content="LOGIN"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                                   FontSize="30"  FontWeight="Light"/>
+                                   FontSize="30"  FontWeight="Light" Command="{Binding Login_PageCommand}"/>
                                 
                                 <Line Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
                               HorizontalAlignment="Center" VerticalAlignment="Top"
-                              StrokeThickness="2"/>
+                              StrokeThickness="2" Visibility="{Binding LoginVisibility}"/>
                             </StackPanel>
                             
                             
@@ -93,11 +93,11 @@
 
                                 <Button Template="{StaticResource Login_and_SingUp}" Content="SIGN UP"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                                   FontSize="30"  FontWeight="Light"/>
+                                   FontSize="30"  FontWeight="Light" Command="{Binding SignUp_PageComamnd}"/>
 
                                 <Line Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
                               HorizontalAlignment="Center" VerticalAlignment="Top"
-                              StrokeThickness="2"/>
+                              StrokeThickness="2" Visibility="{Binding SignUpVisibility}"/>
                             </StackPanel>
 
 
@@ -105,7 +105,7 @@
 
 
                         <Grid Grid.Row="1" x:Name="UserControlCommon">
-                            <ContentControl Content="{Binding UserControl_log_and_signup}"/>
+                            <ContentControl Content="{Binding UserControlPanel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
 
 

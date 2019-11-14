@@ -27,13 +27,15 @@ namespace Babat_Taxi.ViewModels
 
         #region Commands
         public MyCommand LoginCommand { get; set; }
-        public MyCommand Login_Page { get; set; }
-        public MyCommand SignUp_Page { get; set; }
+        public MyCommand SignUpComamnd { get; set; }
+
+        public MyCommand Login_PageCommand { get; set; }
+        public MyCommand SignUp_PageComamnd { get; set; }
+
 
 
 
         #endregion
-
 
 
         #region EmailBox
@@ -62,28 +64,62 @@ namespace Babat_Taxi.ViewModels
         #endregion
 
 
-        
+        #region Top Line Visibility
+
+        private Visibility _loginvisibility;
+
+        public Visibility LoginVisibility
+        {
+            get { return _loginvisibility; }
+            set { _loginvisibility = value;  OnPropertyChanged(); }
+        }
 
 
-        public Grid UserControl_log_and_signup { get; set; }
 
+
+        private Visibility _signupvisibility;
+
+        public Visibility SignUpVisibility
+        {
+            get { return _signupvisibility; }
+            set { _signupvisibility = value; OnPropertyChanged(); }
+        }
+
+        #endregion
+
+        private Grid _usercontrolpanel;
+        public Grid UserControlPanel
+        {
+            get { return _usercontrolpanel; }
+            set { _usercontrolpanel = value; OnPropertyChanged(); }
+        }
+
+    
+        public UserControlLogin userControlLogin { get; set; }
+        public UserControlSignUp userControlSignUp { get; set; }
         public LoginPageViewModel()
         {
-            UserControl_log_and_signup = new Grid();
-            UserControlLogin userControlLogin = new UserControlLogin();
-
-            UserControlSignUp userControlSignUp = new UserControlSignUp();
-            UserControl_log_and_signup.Children.Add(userControlSignUp);
-
-
+            UserControlPanel = new Grid();
+            userControlLogin = new UserControlLogin();
+            userControlSignUp = new UserControlSignUp();
+            LoginVisibility = Visibility.Visible;
+            SignUpVisibility = Visibility.Hidden;
 
 
 
-            
 
+            UserControlPanel.Children.Add(userControlLogin);
+
+
+
+
+
+
+
+            Login_PageCommand = new MyCommand(Login_PageExecute, Login_PageCanExecute);
+            SignUp_PageComamnd = new MyCommand(SignUp_PageExecute, SignUp_PageCanExecute);
 
             LoginCommand = new MyCommand(LoginCommandExecute,LoginCommandCanExecute);
-            SignUp_Page = new MyCommand(Login_PageExecute,Login_PageCanExecute);
         }
 
         private void LoginCommandExecute(object obj)
@@ -100,7 +136,10 @@ namespace Babat_Taxi.ViewModels
 
         private void Login_PageExecute(object obj)
         {
-
+            LoginVisibility = Visibility.Visible;
+            SignUpVisibility = Visibility.Hidden;
+            UserControlPanel.Children.Clear();
+            UserControlPanel.Children.Add(userControlLogin);
         }
         private bool Login_PageCanExecute(object obj)
         {
@@ -109,7 +148,17 @@ namespace Babat_Taxi.ViewModels
 
 
 
-
+        private void SignUp_PageExecute(object obj)
+        {
+            LoginVisibility = Visibility.Hidden;
+            SignUpVisibility = Visibility.Visible;
+            UserControlPanel.Children.Clear();
+            UserControlPanel.Children.Add(userControlSignUp);
+        }
+        private bool SignUp_PageCanExecute(object obj)
+        {
+            return true;
+        }
 
     }
 }

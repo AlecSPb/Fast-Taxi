@@ -94,3 +94,4 @@ D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\GeneratedInternalTypeHel
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\PlaceHolderTextBox.baml
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlSignUp.g.cs
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlSignUp.baml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
