@@ -80,10 +80,12 @@
                                 <Button Template="{StaticResource Login_and_SingUp}" Content="LOGIN"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
                                    FontSize="30"  FontWeight="Light" Command="{Binding Login_PageCommand}"/>
-                                
-                                <Line Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
+
+                                <Line x:Name="line1" Margin="0,8,0,0" X1="80" Stroke="#4fe0c6"
                               HorizontalAlignment="Center" VerticalAlignment="Top"
-                              StrokeThickness="2" Visibility="{Binding LoginVisibility}"/>
+                              StrokeThickness="2.521452" Visibility="{Binding LoginVisibility}"/>
+
+
                             </StackPanel>
                             
                             

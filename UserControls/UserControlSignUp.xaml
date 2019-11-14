@@ -63,8 +63,8 @@
         
         
         <StackPanel x:Name="CardInfo" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"> 
-            <RadioButton Background="White" Content="Yes" Foreground="White" FontSize="20" GroupName="CardCheck"/>
-            <TextBlock Text="Do you have a credit card?" FontSize="20" Foreground="White" FontFamily="Segoe UI" Margin="50,0,50,0"/>
+            <TextBlock Text="Do you have a credit card?" FontSize="20" Foreground="White" FontFamily="Segoe UI" Margin="0,0,50,0"/>
+            <RadioButton Background="White" Content="Yes" Foreground="White" FontSize="20" GroupName="CardCheck" Margin="0,0,50,0"/>
             <RadioButton Background="White" Content="No" Foreground="White" FontSize="20" GroupName="CardCheck" />
 
         </StackPanel>

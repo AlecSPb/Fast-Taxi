@@ -95,3 +95,10 @@ D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\PlaceHolder
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlSignUp.g.cs
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlSignUp.baml
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\PlaceHolderTextBox.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlLogin.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlSignUp.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\PlaceHolderTextBox.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlLogin.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlSignUp.baml
