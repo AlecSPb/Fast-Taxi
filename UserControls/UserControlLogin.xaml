@@ -5,15 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Babat_Taxi.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+             
+       
+        FontFamily="{DynamicResource MaterialDesignFont}">
 
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../Resources/DictionaryLogin.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#4fe0c6"/>
         </ResourceDictionary>
     </UserControl.Resources>
+    
+    
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -21,34 +40,15 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid x:Name="Emailbox" Grid.Row="0">
-            <local:PlaceHolderTextBox  PlaceHolderText="Email" Text="{Binding EmailTxtBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" Foreground="White"
-                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2"/>
-            
+            <TextBox  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailTxtBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" 
+                                       BorderBrush="White"  Background="Transparent" BorderThickness="0,0,0,2" Foreground="DarkGray"/>
         </Grid>
-
-
-
-        
-        
-        
         <Grid x:Name="Passwordbox"  Grid.Row="1">
-            <local:PlaceHolderTextBox PlaceHolderText="Password"  x:Name="txtPassword"  Width="450" Height="40" FontSize="25" Foreground="White"
-                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2"/>
+            <PasswordBox materialDesign:HintAssist.Hint="Password" Name="txtPassword"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
+                                     BorderBrush="White"  Background="Transparent" BorderThickness="0,0,0,2"/>
         </Grid>
-
-
-        
-        
-        
-        
-        
-        
-        
-
         <StackPanel x:Name="Buttons" Grid.Row="2" VerticalAlignment="Center">
-
-            <Button Grid.Column="0" Template="{StaticResource LoginPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Login" Command="{Binding LoginCommand}"/>
-
+            <Button Grid.Column="0" Template="{StaticResource LoginPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Login" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=txtPassword}"/>
         </StackPanel>
     </Grid>
 </UserControl>

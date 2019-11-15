@@ -53,7 +53,7 @@ namespace Babat_Taxi.ViewModels
         private string _passwordtxtbox;
         public string PasswordTxtBox
         {
-            get { return _emailtxtbox; }
+            get { return _passwordtxtbox; }
             set
             {
                 _passwordtxtbox = value;
@@ -124,7 +124,8 @@ namespace Babat_Taxi.ViewModels
 
         private void LoginCommandExecute(object obj)
         {
-            MessageBox.Show(EmailTxtBox);
+            PasswordTxtBox = (obj as PasswordBox).Password;
+            MessageBox.Show(PasswordTxtBox);
         }
         private bool LoginCommandCanExecute(object obj)
         {
