@@ -32,7 +32,7 @@
         </GradientStopCollection>
     </RadialGradientBrush>
 
-    <ControlTemplate x:Key="LoginPageButton" TargetType="Button">
+    <ControlTemplate x:Key="MyPageButton" TargetType="Button">
         <Border x:Name="btnBorder" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" CornerRadius="10" BorderThickness="4" Background="{StaticResource ButtonGradient}">
 
 

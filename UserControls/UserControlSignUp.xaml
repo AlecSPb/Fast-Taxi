@@ -12,6 +12,12 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../Resources/DictionaryLogin.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#4fe0c6"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#4fe0c6"/>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -21,80 +27,35 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
         
-        
-        
-        
-        
-        
-        <Grid x:Name="Emailbox" Grid.Row="0">
-            <local:PlaceHolderTextBox  PlaceHolderText="Username" Text="{Binding EmailTxtBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" Foreground="White"
-                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2"/>
-
+        <Grid x:Name="Usernamegrid" Grid.Row="0">
+            <TextBox  materialDesign:HintAssist.Hint="Username" Text="{Binding UsernameSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
+                                     BorderBrush="White" Background="Transparent" BorderThickness="0,0,0,2"/>
         </Grid>
 
-
-
-
-
-
-        <Grid x:Name="Passwordbox"  Grid.Row="1">
-            <local:PlaceHolderTextBox PlaceHolderText="Email"  x:Name="txtPassword"  Width="450" Height="40" FontSize="25" Foreground="White"
-                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2"/>
+        <Grid x:Name="Emailgrid"  Grid.Row="1">
+            <TextBox  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailBoxSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
+                                     BorderBrush="White" Background="Transparent" BorderThickness="0,0,0,2"/>
         </Grid>
 
-
-
-
-
-        <Grid x:Name="Username" Grid.Row="2">
-            <local:PlaceHolderTextBox  PlaceHolderText="Password" Text="{Binding EmailTxtBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   Width="450" Height="40" FontSize="25" Foreground="White"
-                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2"/>
-
+        <Grid x:Name="Passwordgrid" Grid.Row="2">
+            <PasswordBox materialDesign:HintAssist.Hint="Password" x:Name="Passwordtxt"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
+                                     BorderBrush="White" Background="Transparent" BorderThickness="0,0,0,2"/>
         </Grid>
 
-        <Grid x:Name="Emailagain" Grid.Row="3">
-            <local:PlaceHolderTextBox  PlaceHolderText="Password " Text="{Binding EmailTxtBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   Width="450" Height="40" FontSize="25" Foreground="White"
-                                     BorderBrush="White" Style="{x:Null}" Background="Transparent" BorderThickness="0,0,0,2"/>
-
-        </Grid>
         
-        
-        <StackPanel x:Name="CardInfo" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"> 
-            <TextBlock Text="Do you have a credit card?" FontSize="20" Foreground="White" FontFamily="Segoe UI" Margin="0,0,50,0"/>
-            <RadioButton Background="White" Content="Yes" Foreground="White" FontSize="20" GroupName="CardCheck" Margin="0,0,50,0"/>
-            <RadioButton Background="White" Content="No" Foreground="White" FontSize="20" GroupName="CardCheck" />
-
+        <StackPanel x:Name="CardInfo" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"> 
+            <TextBlock Text="Do you have a credit card?" FontSize="20" Foreground="White"  FontFamily="Segoe UI" Margin="0,0,50,0"/>
+            <RadioButton Background="White" Content="Yes" Foreground="White" FontSize="20" IsChecked="{Binding YesRadioSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GroupName="CardCheck" Margin="0,0,50,0"/>
+            <RadioButton Background="White" Content="No" Foreground="White" FontSize="20"  IsChecked="{Binding NoRadioSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GroupName="CardCheck" />
         </StackPanel>
 
 
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <StackPanel x:Name="Buttons" Grid.Row="4" VerticalAlignment="Center">
 
-
-        <StackPanel x:Name="Buttons" Grid.Row="5" VerticalAlignment="Center">
-
-            <Button Grid.Column="0" Template="{StaticResource LoginPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Sign Up" Command="{Binding LoginCommand}"/>
+            <Button Grid.Column="0" Template="{StaticResource MyPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Sign Up" Command="{Binding SignUpComamnd}" CommandParameter="{Binding ElementName=Passwordtxt}"/>
 
         </StackPanel>
     </Grid>

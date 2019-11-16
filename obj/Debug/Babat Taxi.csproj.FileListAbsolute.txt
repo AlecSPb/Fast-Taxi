@@ -89,9 +89,6 @@ C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.exe
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.pdb
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlLogin.g.cs
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlLogin.baml
-D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\PlaceHolderTextBox.g.cs
-D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\GeneratedInternalTypeHelper.g.cs
-D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\PlaceHolderTextBox.baml
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlSignUp.g.cs
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlSignUp.baml
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
@@ -102,3 +99,7 @@ C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\PlaceHolderTextBox.baml
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlLogin.baml
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlSignUp.baml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Autofac.dll
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Autofac.pdb
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Autofac.xml
+D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\AutoClosingMessageBox.dll

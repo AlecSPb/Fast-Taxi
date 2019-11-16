@@ -40,7 +40,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid x:Name="Emailbox" Grid.Row="0">
-            <TextBox  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailTxtBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" 
+            <TextBox  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailboxLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" 
                                        BorderBrush="White"  Background="Transparent" BorderThickness="0,0,0,2" Foreground="DarkGray"/>
         </Grid>
         <Grid x:Name="Passwordbox"  Grid.Row="1">
@@ -48,7 +48,7 @@
                                      BorderBrush="White"  Background="Transparent" BorderThickness="0,0,0,2"/>
         </Grid>
         <StackPanel x:Name="Buttons" Grid.Row="2" VerticalAlignment="Center">
-            <Button Grid.Column="0" Template="{StaticResource LoginPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Login" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=txtPassword}"/>
+            <Button Grid.Column="0" Template="{StaticResource MyPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Login" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=txtPassword}"/>
         </StackPanel>
     </Grid>
 </UserControl>

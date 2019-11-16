@@ -1,4 +1,5 @@
 ﻿using Babat_Taxi.Command;
+using Babat_Taxi.Services;
 using Babat_Taxi.UserControls;
 using System;
 using System.Collections.Generic;
@@ -9,13 +10,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
+using Babat_Taxi.Views;
+using MessageBox = System.Windows.MessageBox;
 
 namespace Babat_Taxi.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
 
-
+        public IAccountManager AccountManager { get; set; }
         #region OnPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged([CallerMemberName]string property = "")
@@ -23,47 +27,6 @@ namespace Babat_Taxi.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
         #endregion
-
-
-        #region Commands
-        public MyCommand LoginCommand { get; set; }
-        public MyCommand SignUpComamnd { get; set; }
-
-        public MyCommand Login_PageCommand { get; set; }
-        public MyCommand SignUp_PageComamnd { get; set; }
-
-
-
-
-        #endregion
-
-
-        #region EmailBox
-        private string _emailtxtbox;
-        public string EmailTxtBox
-        {
-            get { return _emailtxtbox; }
-            set {
-                _emailtxtbox = value;
-                OnPropertyChanged();
-            }
-        }
-        #endregion
-        #region PasswordBox
-        private string _passwordtxtbox;
-        public string PasswordTxtBox
-        {
-            get { return _passwordtxtbox; }
-            set
-            {
-                _passwordtxtbox = value;
-                OnPropertyChanged();
-            }
-        }
-
-        #endregion
-
-
         #region Top Line Visibility
 
         private Visibility _loginvisibility;
@@ -71,7 +34,7 @@ namespace Babat_Taxi.ViewModels
         public Visibility LoginVisibility
         {
             get { return _loginvisibility; }
-            set { _loginvisibility = value;  OnPropertyChanged(); }
+            set { _loginvisibility = value; OnPropertyChanged(); }
         }
 
 
@@ -86,7 +49,7 @@ namespace Babat_Taxi.ViewModels
         }
 
         #endregion
-
+        #region UserControlPanel
         private Grid _usercontrolpanel;
         public Grid UserControlPanel
         {
@@ -94,72 +57,195 @@ namespace Babat_Taxi.ViewModels
             set { _usercontrolpanel = value; OnPropertyChanged(); }
         }
 
-    
         public UserControlLogin userControlLogin { get; set; }
         public UserControlSignUp userControlSignUp { get; set; }
-        public LoginPageViewModel()
+        #endregion
+        #region Commands
+        public MyCommand LoginCommand { get; set; }
+        public MyCommand SignUpComamnd { get; set; }
+
+        public MyCommand Login_PageCommand { get; set; }
+        public MyCommand SignUp_PageComamnd { get; set; }
+
+
+
+
+        #endregion
+
+
+
+        #region EmailboxLogin
+        private string _emailboxLogin;
+        public string EmailboxLogin
+        {
+            get { return _emailboxLogin; }
+            set
+            {
+                _emailboxLogin = value;
+                OnPropertyChanged();
+            }
+        }
+        #endregion
+        #region PasswordboxLogin
+        private string _passwordboxLogin;
+        public string PasswordboxLogin
+        {
+            get { return _passwordboxLogin; }
+            set
+            {
+                _passwordboxLogin = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
+
+        #region UsernameSignUp
+        private string _usernameSignUp;
+
+        public string UsernameSignUp
+        {
+            get { return _usernameSignUp; }
+            set { _usernameSignUp = value; OnPropertyChanged(); }
+        }
+
+        #endregion
+        #region EmailBoxSignUp
+        private string _emailboxSignUp;
+
+        public string EmailBoxSignUp
+        {
+            get { return _emailboxSignUp; }
+            set { _emailboxSignUp = value; OnPropertyChanged(); }
+        }
+
+        #endregion
+        #region PasswordboxSignUp
+        private string _passwordboxSignup;
+
+        public string PasswordboxSignUp
+        {
+            get { return _passwordboxSignup; }
+            set { _passwordboxSignup = value; OnPropertyChanged(); }
+        }
+
+        #endregion
+        #region YesRadioSignUp
+        private bool _yesradioSignUp;
+
+        public bool YesRadioSignUp
+        {
+            get { return _yesradioSignUp; }
+            set { _yesradioSignUp = value; OnPropertyChanged(); }
+        }
+
+        #endregion
+        #region NoRadioSignUp
+        private bool _noradioSignUp;
+
+        public bool NoRadioSignUp
+        {
+            get { return _noradioSignUp; }
+            set { _noradioSignUp = value; OnPropertyChanged(); }
+        }
+
+        #endregion
+
+        public LoginPageViewModel(IAccountManager accountManager)
         {
             UserControlPanel = new Grid();
             userControlLogin = new UserControlLogin();
             userControlSignUp = new UserControlSignUp();
             LoginVisibility = Visibility.Visible;
             SignUpVisibility = Visibility.Hidden;
-
-
-
-
             UserControlPanel.Children.Add(userControlLogin);
+            AccountManager = accountManager;
+
+
+            
 
 
 
 
 
+            Login_PageCommand = new MyCommand(Login_PageCommandExecute);
+            SignUp_PageComamnd = new MyCommand(SignUp_PageCommandExecute);
 
-
-            Login_PageCommand = new MyCommand(Login_PageExecute, Login_PageCanExecute);
-            SignUp_PageComamnd = new MyCommand(SignUp_PageExecute, SignUp_PageCanExecute);
-
-            LoginCommand = new MyCommand(LoginCommandExecute,LoginCommandCanExecute);
+            LoginCommand = new MyCommand(LoginCommandExecute, LoginCommandCanExecute);
+            SignUpComamnd = new MyCommand(SignUpCommandExecute, SignUpCommandCanExecute);
         }
-
-        private void LoginCommandExecute(object obj)
+        private void Login_PageCommandExecute(object obj)
         {
-            PasswordTxtBox = (obj as PasswordBox).Password;
-            MessageBox.Show(PasswordTxtBox);
-        }
-        private bool LoginCommandCanExecute(object obj)
-        {
-            return true;
-        }
 
-
-
-
-        private void Login_PageExecute(object obj)
-        {
             LoginVisibility = Visibility.Visible;
             SignUpVisibility = Visibility.Hidden;
             UserControlPanel.Children.Clear();
             UserControlPanel.Children.Add(userControlLogin);
         }
-        private bool Login_PageCanExecute(object obj)
-        {
-            return true;
-        }
-
-
-
-        private void SignUp_PageExecute(object obj)
+        private void SignUp_PageCommandExecute(object obj)
         {
             LoginVisibility = Visibility.Hidden;
             SignUpVisibility = Visibility.Visible;
             UserControlPanel.Children.Clear();
             UserControlPanel.Children.Add(userControlSignUp);
         }
-        private bool SignUp_PageCanExecute(object obj)
+
+
+
+
+
+        private void LoginCommandExecute(object obj)
         {
-            return true;
+            PasswordboxLogin = (obj as PasswordBox).Password;
+
+            //AutoClosingMessageBox.Show("...");
+
+            if (!string.IsNullOrEmpty(PasswordboxLogin))
+            {
+                if (AccountManager.HaveAccount(EmailboxLogin, PasswordboxLogin))
+                {
+                    AutoClosingMessageBox.Show("Login Succesfully, please wait....", "Account info");
+
+                }
+                else
+                    MessageBox.Show("Wrong Email or Password", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
         }
+        private bool LoginCommandCanExecute(object obj)
+        {
+            if (string.IsNullOrEmpty(EmailboxLogin)) return false;
+            else return true;
+        }
+
+
+        private void SignUpCommandExecute(object obj)
+        {
+            PasswordboxSignUp = (obj as PasswordBox).Password;
+
+
+            if (!string.IsNullOrEmpty(PasswordboxSignUp))
+            {
+                if (!AccountManager.HaveDublicate(UsernameSignUp))
+                {
+                    AccountManager.AddAccount(UsernameSignUp, EmailBoxSignUp, PasswordboxSignUp, YesRadioSignUp);
+                    MessageBox.Show("Succesfully registered!", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                    MessageBox.Show("This username has already registered","Account info",MessageBoxButton.OK,MessageBoxImage.Information);
+            }
+            
+           
+
+        }
+        private bool SignUpCommandCanExecute(object obj)
+        {
+
+            if (string.IsNullOrEmpty(UsernameSignUp) || string.IsNullOrEmpty(EmailBoxSignUp) || (YesRadioSignUp == false && NoRadioSignUp == false)) return false;
+            else return true;
+        }
+
 
     }
 }

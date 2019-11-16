@@ -1,4 +1,5 @@
-﻿using Babat_Taxi.UserControls;
+﻿using Babat_Taxi.Services;
+using Babat_Taxi.UserControls;
 using Babat_Taxi.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -23,8 +24,9 @@ namespace Babat_Taxi.Views
     {
         public LoginPage()
         {
+            var LoginPageViewModels = IoC.Reference.Resolve<LoginPageViewModel>();
             InitializeComponent();
-            this.DataContext = new LoginPageViewModel();
+            this.DataContext = LoginPageViewModels;
         }
 
         

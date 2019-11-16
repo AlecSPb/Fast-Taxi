@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoClosingMessageBox, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoClosingMessageBox.1.0.0.2\lib\net40\AutoClosingMessageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.2.0.325, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignColors.1.2.0\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -50,6 +56,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -91,11 +98,12 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Entitiy.cs" />
+    <Compile Include="Services\AccountManager.cs" />
     <Compile Include="Services\DataFromServer.cs" />
+    <Compile Include="Services\IAccountManager.cs" />
     <Compile Include="Services\IDataFromServer.cs" />
-    <Compile Include="UserControls\PlaceHolderTextBox.xaml.cs">
-      <DependentUpon>PlaceHolderTextBox.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Services\IoC.cs" />
+    <Compile Include="Services\ViewManager.cs" />
     <Compile Include="UserControls\UserControlLogin.xaml.cs">
       <DependentUpon>UserControlLogin.xaml</DependentUpon>
     </Compile>
@@ -144,10 +152,6 @@
   <ItemGroup />
   <ItemGroup>
     <Page Include="Resources\DictionaryLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\PlaceHolderTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
