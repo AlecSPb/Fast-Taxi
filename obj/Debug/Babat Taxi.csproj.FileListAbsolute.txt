@@ -103,3 +103,56 @@ D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Autofac.dll
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Autofac.pdb
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Autofac.xml
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\AutoClosingMessageBox.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Babat Taxi.exe.config
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Babat Taxi.exe
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Babat Taxi.pdb
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\AutoClosingMessageBox.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Autofac.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\MaterialDesignColors.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Newtonsoft.Json.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Autofac.pdb
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Autofac.xml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\MaterialDesignColors.pdb
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\Newtonsoft.Json.xml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlLogin.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlSignUp.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\LoginPage.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\MainMap.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\SplashScreen.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\App.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat Taxi_MarkupCompile.cache
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat Taxi_MarkupCompile.lref
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\App.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Resources\DictionaryLogin.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlLogin.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlSignUp.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\LoginPage.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\MainMap.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\SplashScreen.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat Taxi.g.resources
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat_Taxi.Properties.Resources.resources
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat Taxi.csproj.GenerateResource.cache
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat Taxi.csproj.CopyComplete
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat Taxi.exe
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Babat Taxi.pdb

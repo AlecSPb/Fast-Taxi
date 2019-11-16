@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\
 Babat_Taxi
 none
 false
 DEBUG;TRACE
-D:\Visual Studio files\C# WPF\Exam\Babat Taxi\App.xaml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\App.xaml
 6-688043466
 
-21-232051412
-26-621684690
+22-18619052
+26496451312
 Resources\DictionaryLogin.xaml;UserControls\UserControlLogin.xaml;UserControls\UserControlSignUp.xaml;Views\LoginPage.xaml;Views\MainMap.xaml;Views\SplashScreen.xaml;
 
 False

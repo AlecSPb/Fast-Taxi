@@ -28,11 +28,21 @@ namespace Babat_Taxi.Services
             Accounts.Add(account);
         }
 
-        public bool HaveDublicate(string username)
+        public bool HaveDublicateUsername(string username)
         {
             foreach (var item in Accounts)
             {
                 if (item.Username == username)
+                    return true;
+            }
+            return false;
+        }
+
+        public bool HaveDublicateEmail(string email)
+        {
+            foreach (var item in Accounts)
+            {
+                if (item.Email == email)
                     return true;
             }
             return false;
@@ -47,5 +57,16 @@ namespace Babat_Taxi.Services
             }
             return false;
         }
+
+        public Account GetAccount(string email, string password)
+        {
+            foreach (var item in Accounts)
+            {
+                if (item.Email == email && item.Password == password)
+                    return item;
+            }
+            return null ;
+        }
+
     }
 }

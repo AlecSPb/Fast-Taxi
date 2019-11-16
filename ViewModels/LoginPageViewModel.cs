@@ -18,6 +18,7 @@ namespace Babat_Taxi.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
+        
 
         public IAccountManager AccountManager { get; set; }
         #region OnPropertyChanged
@@ -55,6 +56,13 @@ namespace Babat_Taxi.ViewModels
         {
             get { return _usercontrolpanel; }
             set { _usercontrolpanel = value; OnPropertyChanged(); }
+        }
+
+        private Window _mywindow;
+        public Window MyWindow
+        {
+            get { return _mywindow; }
+            set { _mywindow = value; OnPropertyChanged(); }
         }
 
         public UserControlLogin userControlLogin { get; set; }
@@ -161,7 +169,7 @@ namespace Babat_Taxi.ViewModels
             SignUpVisibility = Visibility.Hidden;
             UserControlPanel.Children.Add(userControlLogin);
             AccountManager = accountManager;
-
+            AccountManager.Accounts = JsonReader.ReadFromFile(AccountManager.Accounts);
 
             
 
@@ -169,7 +177,7 @@ namespace Babat_Taxi.ViewModels
 
 
 
-            Login_PageCommand = new MyCommand(Login_PageCommandExecute);
+            Login_PageCommand = new MyCommand(Login_PageCommandExecute, Login_PageCommandCanExecute);
             SignUp_PageComamnd = new MyCommand(SignUp_PageCommandExecute);
 
             LoginCommand = new MyCommand(LoginCommandExecute, LoginCommandCanExecute);
@@ -177,14 +185,20 @@ namespace Babat_Taxi.ViewModels
         }
         private void Login_PageCommandExecute(object obj)
         {
-
+           
             LoginVisibility = Visibility.Visible;
             SignUpVisibility = Visibility.Hidden;
             UserControlPanel.Children.Clear();
             UserControlPanel.Children.Add(userControlLogin);
         }
+        private bool Login_PageCommandCanExecute(object obj)
+        {
+            MyWindow = (obj as Window);
+            return true;
+        }
         private void SignUp_PageCommandExecute(object obj)
         {
+
             LoginVisibility = Visibility.Hidden;
             SignUpVisibility = Visibility.Visible;
             UserControlPanel.Children.Clear();
@@ -199,14 +213,14 @@ namespace Babat_Taxi.ViewModels
         {
             PasswordboxLogin = (obj as PasswordBox).Password;
 
-            //AutoClosingMessageBox.Show("...");
-
             if (!string.IsNullOrEmpty(PasswordboxLogin))
             {
                 if (AccountManager.HaveAccount(EmailboxLogin, PasswordboxLogin))
                 {
                     AutoClosingMessageBox.Show("Login Succesfully, please wait....", "Account info");
-
+                    MainMap mainMap = new MainMap(AccountManager, AccountManager.GetAccount(EmailboxLogin, PasswordboxLogin));
+                    mainMap.Show();
+                    MyWindow.Close();
                 }
                 else
                     MessageBox.Show("Wrong Email or Password", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -227,13 +241,21 @@ namespace Babat_Taxi.ViewModels
 
             if (!string.IsNullOrEmpty(PasswordboxSignUp))
             {
-                if (!AccountManager.HaveDublicate(UsernameSignUp))
+                if (AccountManager.HaveDublicateUsername(UsernameSignUp))
+                {
+                    MessageBox.Show("This username has already registered", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else if (AccountManager.HaveDublicateEmail(EmailBoxSignUp))
+                {
+                    MessageBox.Show("This email has already registered", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
                 {
                     AccountManager.AddAccount(UsernameSignUp, EmailBoxSignUp, PasswordboxSignUp, YesRadioSignUp);
                     MessageBox.Show("Succesfully registered!", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
+                    JsonWriter.WriteToFile(AccountManager.Accounts);
                 }
-                else
-                    MessageBox.Show("This username has already registered","Account info",MessageBoxButton.OK,MessageBoxImage.Information);
+
             }
             
            

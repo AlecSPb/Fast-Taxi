@@ -1,4 +1,6 @@
-﻿using Babat_Taxi.ViewModels;
+﻿using Babat_Taxi.Models;
+using Babat_Taxi.Services;
+using Babat_Taxi.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +22,10 @@ namespace Babat_Taxi.Views
     /// </summary>
     public partial class MainMap : Window
     {
-        public MainMap()
+        public MainMap(IAccountManager accountManager, Account account)
         {
             InitializeComponent();
-            this.DataContext = new MyMapViewModel();
+            this.DataContext = new MyMapViewModel(accountManager, account);
         }
     }
 }

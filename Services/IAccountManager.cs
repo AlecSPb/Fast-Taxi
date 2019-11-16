@@ -7,7 +7,9 @@ namespace Babat_Taxi.Services
     {
         List<Account> Accounts { get; set; }
         void AddAccount(string username, string email, string password, bool havecard, Card card = null);
-        bool HaveDublicate(string username);
+        bool HaveDublicateUsername(string username);
+        bool HaveDublicateEmail(string email);
         bool HaveAccount(string email, string password);
+        Account GetAccount(string email, string password);
     }
 }

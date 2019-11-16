@@ -103,6 +103,7 @@
     <Compile Include="Services\IAccountManager.cs" />
     <Compile Include="Services\IDataFromServer.cs" />
     <Compile Include="Services\IoC.cs" />
+    <Compile Include="Services\Writer and reader.cs" />
     <Compile Include="Services\ViewManager.cs" />
     <Compile Include="UserControls\UserControlLogin.xaml.cs">
       <DependentUpon>UserControlLogin.xaml</DependentUpon>
