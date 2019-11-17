@@ -68,7 +68,7 @@
 
             <StackPanel x:Name="Buttons"  VerticalAlignment="Center">
 
-                <Button Grid.Column="0" Template="{StaticResource MyPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Sign Up" Command="{Binding SignUpComamnd}" CommandParameter="{Binding ElementName=Passwordtxt}"/>
+                <Button Grid.Column="0" Template="{StaticResource MyPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="{Binding SignUpNext, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Command="{Binding SignUpComamnd}" CommandParameter="{Binding ElementName=Passwordtxt}"/>
 
             </StackPanel>
         </materialDesign:TransitioningContent>

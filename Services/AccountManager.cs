@@ -68,5 +68,23 @@ namespace Babat_Taxi.Services
             return null ;
         }
 
+        public bool DateAvaibility(DateTime dateTime)
+        {
+
+            int result = DateTime.Compare(dateTime, DateTime.Today);
+
+            if (result > 0)
+            {
+                return true;
+            }
+            else if (result < 0)
+            {
+                return false;
+            }
+            else
+                return false;
+
+        }
+
     }
 }

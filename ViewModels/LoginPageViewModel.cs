@@ -13,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using Babat_Taxi.Views;
 using MessageBox = System.Windows.MessageBox;
+using Babat_Taxi.Models;
 
 namespace Babat_Taxi.ViewModels
 {
@@ -67,10 +68,14 @@ namespace Babat_Taxi.ViewModels
 
         public UserControlLogin userControlLogin { get; set; }
         public UserControlSignUp userControlSignUp { get; set; }
+        public UserControlCardInfo userControlCardInfo { get; set; }
         #endregion
         #region Commands
         public MyCommand LoginCommand { get; set; }
         public MyCommand SignUpComamnd { get; set; }
+        public MyCommand SignUpWithCardComamnd { get; set; }
+
+
 
         public MyCommand Login_PageCommand { get; set; }
         public MyCommand SignUp_PageComamnd { get; set; }
@@ -160,17 +165,66 @@ namespace Babat_Taxi.ViewModels
 
         #endregion
 
+
+        #region SignUpNext
+        private string _signUpNext;
+        public string SignUpNext
+        {
+            get { return _signUpNext; }
+            set { _signUpNext = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+
+
+        #region CardNumber
+        private string _cardnumber;
+
+        public string CardNumberSignUp
+        {
+            get { return _cardnumber; }
+            set { _cardnumber = value; OnPropertyChanged(); }
+        }
+        #endregion
+        #region CCV
+        private string _ccv;
+
+        public string CCVSignUp
+        {
+            get { return _ccv; }
+            set { _ccv = value; OnPropertyChanged(); }
+        }
+        #endregion
+        #region ExpireDate
+
+        private DateTime _expiredate;
+        public DateTime ExpireDateSignUp
+        {
+            get { return _expiredate; }
+            set { _expiredate = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+
+
+
         public LoginPageViewModel(IAccountManager accountManager)
         {
             UserControlPanel = new Grid();
             userControlLogin = new UserControlLogin();
             userControlSignUp = new UserControlSignUp();
+            userControlCardInfo = new UserControlCardInfo();
             LoginVisibility = Visibility.Visible;
             SignUpVisibility = Visibility.Hidden;
             UserControlPanel.Children.Add(userControlLogin);
             AccountManager = accountManager;
-            AccountManager.Accounts = JsonReader.ReadFromFile(AccountManager.Accounts);
 
+            if (JsonReader.ReadFromFile(AccountManager.Accounts) == null)
+                AccountManager.Accounts = new List<Account>();
+
+            else
+                AccountManager.Accounts = JsonReader.ReadFromFile(AccountManager.Accounts);
+            ExpireDateSignUp = DateTime.Today;
             
 
 
@@ -182,6 +236,8 @@ namespace Babat_Taxi.ViewModels
 
             LoginCommand = new MyCommand(LoginCommandExecute, LoginCommandCanExecute);
             SignUpComamnd = new MyCommand(SignUpCommandExecute, SignUpCommandCanExecute);
+
+            SignUpWithCardComamnd = new MyCommand(SignUpWithCardComamndExecute, SignUpWithCardCanComamndExecute);
         }
         private void Login_PageCommandExecute(object obj)
         {
@@ -194,6 +250,14 @@ namespace Babat_Taxi.ViewModels
         private bool Login_PageCommandCanExecute(object obj)
         {
             MyWindow = (obj as Window);
+            if (YesRadioSignUp)
+            {
+                SignUpNext = "Next";
+            }
+            else
+            {
+                SignUpNext = "Sign Up";
+            }
             return true;
         }
         private void SignUp_PageCommandExecute(object obj)
@@ -206,8 +270,38 @@ namespace Babat_Taxi.ViewModels
         }
 
 
+        private void SignUpWithCardComamndExecute(object obj)
+        {
+            AccountManager.AddAccount(UsernameSignUp, EmailBoxSignUp, PasswordboxSignUp, YesRadioSignUp, new Card { 
+            CardNumber = CardNumberSignUp,
+            CCV = CCVSignUp,
+            ExpireDate = ExpireDateSignUp
+            });
+            MessageBox.Show("Succesfully registered!", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
+            JsonWriter.WriteToFile(AccountManager.Accounts);
+            LoginVisibility = Visibility.Visible;
+            SignUpVisibility = Visibility.Hidden;
+            UserControlPanel.Children.Clear();
+            UserControlPanel.Children.Add(userControlLogin);
 
-
+            UsernameSignUp = "";
+            EmailBoxSignUp = "";
+            YesRadioSignUp = false;
+            NoRadioSignUp = false;
+            CardNumberSignUp = "";
+            CCVSignUp = "";
+        }
+        private bool SignUpWithCardCanComamndExecute(object obj)
+        {
+            if (string.IsNullOrEmpty(CardNumberSignUp) || string.IsNullOrEmpty(CCVSignUp) || !AccountManager.DateAvaibility(ExpireDateSignUp))
+            {
+                return false;
+            }
+            else if (CardNumberSignUp.Contains("_") || CCVSignUp.Contains("_") || !AccountManager.DateAvaibility(ExpireDateSignUp))
+                return false;
+            else
+                return true;
+        }
 
         private void LoginCommandExecute(object obj)
         {
@@ -219,6 +313,8 @@ namespace Babat_Taxi.ViewModels
                 {
                     AutoClosingMessageBox.Show("Login Succesfully, please wait....", "Account info");
                     MainMap mainMap = new MainMap(AccountManager, AccountManager.GetAccount(EmailboxLogin, PasswordboxLogin));
+                    EmailboxLogin = "";
+                    PasswordboxLogin = "";
                     mainMap.Show();
                     MyWindow.Close();
                 }
@@ -236,7 +332,8 @@ namespace Babat_Taxi.ViewModels
 
         private void SignUpCommandExecute(object obj)
         {
-            PasswordboxSignUp = (obj as PasswordBox).Password;
+            if (UserControlPanel.Children[0] != userControlCardInfo)
+                PasswordboxSignUp = (obj as PasswordBox).Password;
 
 
             if (!string.IsNullOrEmpty(PasswordboxSignUp))
@@ -251,14 +348,32 @@ namespace Babat_Taxi.ViewModels
                 }
                 else
                 {
-                    AccountManager.AddAccount(UsernameSignUp, EmailBoxSignUp, PasswordboxSignUp, YesRadioSignUp);
-                    MessageBox.Show("Succesfully registered!", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
-                    JsonWriter.WriteToFile(AccountManager.Accounts);
+                    if (!YesRadioSignUp && NoRadioSignUp)
+                    {
+                        AccountManager.AddAccount(UsernameSignUp, EmailBoxSignUp, PasswordboxSignUp, YesRadioSignUp);
+                        MessageBox.Show("Succesfully registered!", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);
+                        JsonWriter.WriteToFile(AccountManager.Accounts);
+
+                        LoginVisibility = Visibility.Visible;
+                        SignUpVisibility = Visibility.Hidden;
+                        UserControlPanel.Children.Clear();
+                        UserControlPanel.Children.Add(userControlLogin);
+
+                        UsernameSignUp = "";
+                        EmailBoxSignUp = "";
+                        YesRadioSignUp = false;
+                        NoRadioSignUp = false;
+                    }
+                    else
+                    {
+                        UserControlPanel.Children.Clear();
+                        UserControlPanel.Children.Add(userControlCardInfo);
+                    }
                 }
 
             }
-            
-           
+
+
 
         }
         private bool SignUpCommandCanExecute(object obj)

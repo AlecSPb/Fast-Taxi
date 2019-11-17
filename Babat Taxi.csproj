@@ -105,6 +105,9 @@
     <Compile Include="Services\IoC.cs" />
     <Compile Include="Services\Writer and reader.cs" />
     <Compile Include="Services\ViewManager.cs" />
+    <Compile Include="UserControls\UserControlCardInfo.xaml.cs">
+      <DependentUpon>UserControlCardInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlLogin.xaml.cs">
       <DependentUpon>UserControlLogin.xaml</DependentUpon>
     </Compile>
@@ -157,6 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Resources\DictionaryLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlCardInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

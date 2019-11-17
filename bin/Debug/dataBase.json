@@ -1,50 +1,22 @@
 [
   {
-    "Username": "richardlons",
-    "Email": "ubashirov@outlook.com",
-    "Password": "Richardlons853",
-    "HaveCard": true,
-    "CardInfo": null,
-    "ID": "55c42d8e-b2b2-442a-88ee-ffe87b2194ee"
-  },
-  {
-    "Username": "MyLifeYourLife",
-    "Email": "ubashir2017@outlook.com",
-    "Password": "promanyak123",
+    "Username": "ulvibashir",
+    "Email": "ubashir@gmai.com",
+    "Password": "ruger22",
     "HaveCard": false,
     "CardInfo": null,
-    "ID": "97d123f2-f0a1-433a-a409-507ed10074c4"
+    "ID": "067d11f3-0dcb-40de-8929-a686bcd9f98e"
   },
   {
-    "Username": "armud",
-    "Email": "zor",
-    "Password": "zor",
+    "Username": "zoram",
+    "Email": "voram",
+    "Password": "herimen",
     "HaveCard": true,
-    "CardInfo": null,
-    "ID": "44011bfc-d2b5-4e0c-8115-f1899db5f036"
-  },
-  {
-    "Username": "a",
-    "Email": "a",
-    "Password": "a",
-    "HaveCard": true,
-    "CardInfo": null,
-    "ID": "3517115c-c3b9-46c3-a806-7146e2d0af6a"
-  },
-  {
-    "Username": "as",
-    "Email": "as",
-    "Password": "a",
-    "HaveCard": true,
-    "CardInfo": null,
-    "ID": "1999d02b-94c3-449c-8aef-435b527b7c51"
-  },
-  {
-    "Username": "richard",
-    "Email": "uza",
-    "Password": "uza",
-    "HaveCard": false,
-    "CardInfo": null,
-    "ID": "fbc87325-0664-4191-a609-0639c982fa3b"
+    "CardInfo": {
+      "CardNumber": "2234 - 2342 - 3423 - 4234",
+      "CCV": " 234",
+      "ExpireDate": "2019-11-20T00:00:00"
+    },
+    "ID": "9f180f41-a399-406a-ac9d-5bda7bfd2356"
   }
 ]

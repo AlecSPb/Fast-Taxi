@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Babat_Taxi.Models;
 
 namespace Babat_Taxi.Services
@@ -11,5 +12,6 @@ namespace Babat_Taxi.Services
         bool HaveDublicateEmail(string email);
         bool HaveAccount(string email, string password);
         Account GetAccount(string email, string password);
+        bool DateAvaibility(DateTime dateTime);
     }
 }
