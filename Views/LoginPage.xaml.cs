@@ -29,6 +29,9 @@ namespace Babat_Taxi.Views
             this.DataContext = LoginPageViewModels;
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

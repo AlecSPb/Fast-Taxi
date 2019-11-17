@@ -20,6 +20,9 @@
             <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#4fe0c6"/>
         </ResourceDictionary>
     </UserControl.Resources>
+
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -28,35 +31,48 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
-        <Grid x:Name="Usernamegrid" Grid.Row="0">
-            <TextBox  materialDesign:HintAssist.Hint="Username" Text="{Binding UsernameSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
+        <materialDesign:TransitioningContent Grid.Row="0" x:Name="TrainsitionigContentSlide1" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.2}">
+
+            <Grid x:Name="Usernamegrid" >
+                <TextBox  materialDesign:HintAssist.Hint="Username" Text="{Binding UsernameSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
                                      BorderBrush="White" Background="Transparent" BorderThickness="0,0,0,2"/>
-        </Grid>
+            </Grid>
+        </materialDesign:TransitioningContent>
 
-        <Grid x:Name="Emailgrid"  Grid.Row="1">
-            <TextBox  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailBoxSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
+        <materialDesign:TransitioningContent Grid.Row="1" x:Name="TrainsitionigContentSlide2" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.3}">
+
+            <Grid x:Name="Emailgrid" >
+                <TextBox  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailBoxSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
                                      BorderBrush="White" Background="Transparent" BorderThickness="0,0,0,2"/>
-        </Grid>
+            </Grid>
+        </materialDesign:TransitioningContent>
 
-        <Grid x:Name="Passwordgrid" Grid.Row="2">
-            <PasswordBox materialDesign:HintAssist.Hint="Password" x:Name="Passwordtxt"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
+        <materialDesign:TransitioningContent Grid.Row="2" x:Name="TrainsitionigContentSlide3" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.4}">
+
+            <Grid x:Name="Passwordgrid">
+                <PasswordBox materialDesign:HintAssist.Hint="Password" x:Name="Passwordtxt"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
                                      BorderBrush="White" Background="Transparent" BorderThickness="0,0,0,2"/>
-        </Grid>
+            </Grid>
+        </materialDesign:TransitioningContent>
 
-        
-        <StackPanel x:Name="CardInfo" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"> 
-            <TextBlock Text="Do you have a credit card?" FontSize="20" Foreground="White"  FontFamily="Segoe UI" Margin="0,0,50,0"/>
-            <RadioButton Background="White" Content="Yes" Foreground="White" FontSize="20" IsChecked="{Binding YesRadioSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GroupName="CardCheck" Margin="0,0,50,0"/>
-            <RadioButton Background="White" Content="No" Foreground="White" FontSize="20"  IsChecked="{Binding NoRadioSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GroupName="CardCheck" />
-        </StackPanel>
+        <materialDesign:TransitioningContent Grid.Row="3" x:Name="TrainsitionigContentSlide4" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.5}">
 
+            <StackPanel x:Name="CardInfo"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Do you have a credit card?" FontSize="20" Foreground="White"  FontFamily="Segoe UI" Margin="0,0,50,0"/>
+                <RadioButton Background="White" Content="Yes" Foreground="White" FontSize="20" IsChecked="{Binding YesRadioSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GroupName="CardCheck" Margin="0,0,50,0"/>
+                <RadioButton Background="White" Content="No" Foreground="White" FontSize="20"  IsChecked="{Binding NoRadioSignUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GroupName="CardCheck" />
+            </StackPanel>
+        </materialDesign:TransitioningContent>
 
+        <materialDesign:TransitioningContent Grid.Row="4" x:Name="TrainsitionigContentSlide5" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.6}">
 
-        <StackPanel x:Name="Buttons" Grid.Row="4" VerticalAlignment="Center">
+            <StackPanel x:Name="Buttons"  VerticalAlignment="Center">
 
-            <Button Grid.Column="0" Template="{StaticResource MyPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Sign Up" Command="{Binding SignUpComamnd}" CommandParameter="{Binding ElementName=Passwordtxt}"/>
+                <Button Grid.Column="0" Template="{StaticResource MyPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Sign Up" Command="{Binding SignUpComamnd}" CommandParameter="{Binding ElementName=Passwordtxt}"/>
 
-        </StackPanel>
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+
     </Grid>
+
 </UserControl>

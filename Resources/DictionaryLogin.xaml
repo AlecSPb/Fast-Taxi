@@ -108,7 +108,5 @@
     </ControlTemplate>
     
     
-    <BitmapImage x:Key="CarLogo" UriSource="../Images/carlogo.png"></BitmapImage>
-    <BitmapImage x:Key="SplashImage" UriSource="../Images/splash.jpg"></BitmapImage>
-
+   
 </ResourceDictionary>

@@ -8,7 +8,8 @@
         WindowStyle="None"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        Title="SplashScreen" Height="300" Width="500">
+        Title="SplashScreen" Height="300" Width="500"
+        Icon="../Images/splashLogo.png">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

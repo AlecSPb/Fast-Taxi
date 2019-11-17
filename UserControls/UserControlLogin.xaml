@@ -29,26 +29,48 @@
             <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#4fe0c6"/>
         </ResourceDictionary>
     </UserControl.Resources>
-    
-    
-    
-    
+
+
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid x:Name="Emailbox" Grid.Row="0">
-            <TextBox  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailboxLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" 
+
+
+
+        <materialDesign:TransitioningContent Grid.Row="0" x:Name="TrainsitionigContentSlide1" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.3}">
+
+            <Grid x:Name="Emailbox" >
+                <TextBox  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailboxLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="25" 
                                        BorderBrush="White"  Background="Transparent" BorderThickness="0,0,0,2" Foreground="DarkGray"/>
-        </Grid>
-        <Grid x:Name="Passwordbox"  Grid.Row="1">
+            </Grid>
+        </materialDesign:TransitioningContent>
+
+
+        <materialDesign:TransitioningContent Grid.Row="1" x:Name="TrainsitionigContentSlide2" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.4}">
+            <Grid x:Name="Passwordbox">
             <PasswordBox materialDesign:HintAssist.Hint="Password" Name="txtPassword"  Width="450" Height="40" FontSize="25" Foreground="DarkGray"
                                      BorderBrush="White"  Background="Transparent" BorderThickness="0,0,0,2"/>
         </Grid>
-        <StackPanel x:Name="Buttons" Grid.Row="2" VerticalAlignment="Center">
+        </materialDesign:TransitioningContent>
+
+
+
+        <materialDesign:TransitioningContent Grid.Row="2" x:Name="TrainsitionigContentSlide3" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.5}">
+                <StackPanel x:Name="Buttons"  VerticalAlignment="Center">
             <Button Grid.Column="0" Template="{StaticResource MyPageButton}" Style="{StaticResource LoginPageButtonStyle}" Content="Login" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=txtPassword}"/>
         </StackPanel>
+        </materialDesign:TransitioningContent>
+
+
+
     </Grid>
+
+
+
+
 </UserControl>

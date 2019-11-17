@@ -38,5 +38,13 @@
     "HaveCard": true,
     "CardInfo": null,
     "ID": "1999d02b-94c3-449c-8aef-435b527b7c51"
+  },
+  {
+    "Username": "richard",
+    "Email": "uza",
+    "Password": "uza",
+    "HaveCard": false,
+    "CardInfo": null,
+    "ID": "fbc87325-0664-4191-a609-0639c982fa3b"
   }
 ]

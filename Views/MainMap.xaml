@@ -5,14 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Babat_Taxi.Views"
         mc:Ignorable="d"
+        Title="MainMap" Height="800" Width="1400"
+        MinHeight="800" MinWidth="1300"
         WindowStartupLocation="CenterScreen"
-        Title="MainMap" Height="450" Width="800"
-        xmlns:map ="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF">
+        xmlns:map ="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        Icon="../Images/mapLogo.png">
     <Grid> <!-- I can use provider binding, works but shows error -->
         <map:Map Name="RoadMap" CredentialsProvider="Ao_jQSDX1s9uPT2kRQF7n1gALuQymIe2AgPyUVwQUq8i4Sa1m-E1GJrrH995z2ND"
                  Center="40.409264, 49.867092" ZoomLevel="12" >
-            
-            
+
+
+            <Grid>
+                <Button></Button>
+            </Grid>
         </map:Map>
+
+        
+
     </Grid>
 </Window>
