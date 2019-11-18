@@ -63,13 +63,13 @@
             <ContentControl Content="{Binding GridMainPanelControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
 
-        <Grid Height="60" VerticalAlignment="Top" Background="#4fe0c6">
+        <Grid Height="60" VerticalAlignment="Top" Background="{StaticResource LeftSidePanelGradient}">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
             </Grid.Effect>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <!--<TextBlock Text="Help" VerticalAlignment="Center" FontSize="16" Foreground="Black"/>-->
-                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="Black">
+                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="White">
                     <StackPanel Width="150">
                         <Button Content="Settings" Command="{Binding SettingsCommand}" CommandParameter="{Binding ElementName=ListViewMenu}"/>
                         <Button Content="Account" Command="{Binding AccountCommand}"/>
@@ -104,7 +104,7 @@
                     </Button> 
                 </Grid>
                 
-                <ListView x:Name="ListViewMenu" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
+                <ListView x:Name="ListViewMenu" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListViewItem x:Name="ItemMap" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Earth" Height="25" Width="25" Margin="10"/>
