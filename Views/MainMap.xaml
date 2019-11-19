@@ -99,7 +99,7 @@
                     <Button x:Name="ButtonOpenMenu" Height="60" Width="60" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="1" Foreground="Black" Command="{Binding OpenMenuCommand}" CommandParameter="{Binding ElementName=GridMain}" Visibility="{Binding OpenMenuVisibility}">
                         <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
                     </Button>
-                    <Button x:Name="ButtonCloseMenu" Height="60" Width="60" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="Black" Command="{Binding CloseMenuCommand}" CommandParameter="{Binding ElementName=myWindow}" Visibility="{Binding CloseMenuVisibility}">
+                    <Button x:Name="ButtonCloseMenu" Height="60" Width="60" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="Black" Command="{Binding CloseMenuCommand}" Visibility="{Binding CloseMenuVisibility}">
                         <materialDesign:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button> 
                 </Grid>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Babat_Taxi.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,9 +36,12 @@ namespace Babat_Taxi.Views
             if (Progbar.Value == 100)
             {
                 timer.Stop();
-                var loginPage = new LoginPage();
-                loginPage.Show();
-                this.Close();
+                ViewManager.ShowLoginPage();
+
+
+                ViewManager.CloseSplashScreen();
+              
+                
             }
             else
                 Progbar.Value += 15;

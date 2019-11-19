@@ -59,12 +59,7 @@ namespace Babat_Taxi.ViewModels
             set { _usercontrolpanel = value; OnPropertyChanged(); }
         }
 
-        private Window _mywindow;
-        public Window MyWindow
-        {
-            get { return _mywindow; }
-            set { _mywindow = value; OnPropertyChanged(); }
-        }
+        
 
         public UserControlLogin userControlLogin { get; set; }
         public UserControlSignUp userControlSignUp { get; set; }
@@ -249,7 +244,6 @@ namespace Babat_Taxi.ViewModels
         }
         private bool Login_PageCommandCanExecute(object obj)
         {
-            MyWindow = (obj as Window);
             if (YesRadioSignUp)
             {
                 SignUpNext = "Next";
@@ -312,11 +306,13 @@ namespace Babat_Taxi.ViewModels
                 if (AccountManager.HaveAccount(EmailboxLogin, PasswordboxLogin))
                 {
                     AutoClosingMessageBox.Show("Login Succesfully, please wait....", "Account info");
-                    MainMap mainMap = new MainMap(AccountManager, AccountManager.GetAccount(EmailboxLogin, PasswordboxLogin));
+                    ViewManager.ShowMainMap(AccountManager, AccountManager.GetAccount(EmailboxLogin, PasswordboxLogin));
+                    //MainMap mainMap = new MainMap(AccountManager, AccountManager.GetAccount(EmailboxLogin, PasswordboxLogin));
                     EmailboxLogin = "";
                     PasswordboxLogin = "";
-                    mainMap.Show();
-                    MyWindow.Close();
+                    //mainMap.Show();
+                    ViewManager.CloseLoginPage();
+                    //MyWindow.Close();
                 }
                 else
                     MessageBox.Show("Wrong Email or Password", "Account info", MessageBoxButton.OK, MessageBoxImage.Information);

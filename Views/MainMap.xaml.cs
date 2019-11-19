@@ -23,9 +23,11 @@ namespace Babat_Taxi.Views
     public partial class MainMap : Window
     {
         public MainMap(IAccountManager accountManager, Account account)
-        {
+        { 
             InitializeComponent();
-            this.DataContext = new MyMapViewModel(accountManager, account);
+            var dataFromServer1 = IoC.Reference.Resolve<DataFromServer>();
+           // DataFromServer dataFromServer = new DataFromServer();
+            this.DataContext = new MyMapViewModel(accountManager, account, dataFromServer1);
         }
 
     }

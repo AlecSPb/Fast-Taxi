@@ -1,42 +1,14 @@
 [
   {
-    "Username": "ulvibashir",
-    "Email": "ubashir@gmai.com",
-    "Password": "ruger22",
-    "HaveCard": false,
-    "CardInfo": null,
-    "ID": "067d11f3-0dcb-40de-8929-a686bcd9f98e"
-  },
-  {
-    "Username": "zoram",
-    "Email": "voram",
-    "Password": "herimen",
-    "HaveCard": true,
-    "CardInfo": {
-      "CardNumber": "2234 - 2342 - 3423 - 4234",
-      "CCV": " 234",
-      "ExpireDate": "2019-11-20T00:00:00"
-    },
-    "ID": "9f180f41-a399-406a-ac9d-5bda7bfd2356"
-  },
-  {
-    "Username": "vxxc",
-    "Email": "vxc",
-    "Password": "x",
-    "HaveCard": true,
-    "CardInfo": {
-      "CardNumber": "3453 - 4535 - 3453 - 4534",
-      "CCV": " 345",
-      "ExpireDate": "2019-11-20T00:00:00"
-    },
-    "ID": "9319367a-be1e-48a7-9b4f-509f3d89bd63"
-  },
-  {
     "Username": "a",
     "Email": "a",
     "Password": "a",
-    "HaveCard": false,
-    "CardInfo": null,
-    "ID": "67859471-5ec2-49e6-b4c7-3c4bd9f805dc"
+    "HaveCard": true,
+    "CardInfo": {
+      "CardNumber": "2342 - 3423 - 4234 - 2342",
+      "CCV": " 234",
+      "ExpireDate": "2019-11-30T00:00:00"
+    },
+    "ID": "404286ab-3920-46c3-8d13-0ab43ab3ae48"
   }
 ]

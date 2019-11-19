@@ -33,8 +33,10 @@ namespace Babat_Taxi.ViewModels
         public IAccountManager AccountManager { get; set; }
         public Account _account { get; set; }
         public ApplicationIdCredentialsProvider Provider { get; set; }
-        bool check = false;
-        bool check1 = false;
+        public IDataFromServer DataFromServer { get; set; }
+
+        bool check = false; // For 1 time Grid load
+        bool check1 = false;  // for 1 time ListView load
 
 
         #region Commands
@@ -88,20 +90,16 @@ namespace Babat_Taxi.ViewModels
             set { _usercontrolpanel = value; OnPropertyChanged(); }
         }
 
-        private Window _mywindow;
-        public Window MapNewWindow
-        {
-            get { return _mywindow; }
-            set { _mywindow = value; OnPropertyChanged(); }
-        }
-
-
         public UserControlMap UserControlMap { get; set; }
+
+
+
         #endregion
-        public MyMapViewModel(IAccountManager accountManager, Account account)
+        public MyMapViewModel(IAccountManager accountManager, Account account, IDataFromServer dataFromServer)
         {
             AccountManager = accountManager;
             _account = account;
+            DataFromServer = dataFromServer;
             Provider = new ApplicationIdCredentialsProvider(ConfigurationManager.AppSettings["BingKey"]);
             OpenMenuVisibility = Visibility.Visible;
             CloseMenuVisibility = Visibility.Collapsed;
@@ -112,7 +110,7 @@ namespace Babat_Taxi.ViewModels
 
 
             OpenMenuCommand = new MyCommand(OpenMenuCommandExecute, OpenMenuCommandCanExecute);
-            CloseMenuCommand = new MyCommand(CloseMenuCommandExecute, CloseMenuCommandCanExecute);
+            CloseMenuCommand = new MyCommand(CloseMenuCommandExecute);
 
             SettingsCommand = new MyCommand(SettingsCommandExecute);
             AccountCommand = new MyCommand(AccountCommandExecute);
@@ -150,11 +148,7 @@ namespace Babat_Taxi.ViewModels
             CloseMenuVisibility = Visibility.Collapsed;
             OpenMenuVisibility = Visibility.Visible;
         }
-        private bool CloseMenuCommandCanExecute(object obj)
-        {
-            MapNewWindow = obj as Window;
-            return true;
-        }
+        
 
 
 
@@ -176,9 +170,13 @@ namespace Babat_Taxi.ViewModels
         }
         private void LogOutCommandExecute(object obj)
         {
-            LoginPage loginPage = new LoginPage();
-            loginPage.Show();
-            MapNewWindow.Close();
+            ViewManager.ShowLoginPage();
+            ViewManager.CloseMainMap();
+
+
+            //LoginPage loginPage = new LoginPage();
+            //loginPage.Show();
+            //MapNewWindow.Close();
 
         }
 

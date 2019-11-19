@@ -23,10 +23,15 @@ namespace Babat_Taxi
                 .Register<AccountManager, IAccountManager>()
                 .Register<DataFromServer,IDataFromServer>()
                 .Register<LoginPageViewModel>()
+                .Register<DataFromServer>()
                 .Build();
 
-            this.MainWindow = new MySplashScreen();
-            this.MainWindow.Show();
+            ViewManager viewManager = new ViewManager();
+            ViewManager.ShowSplashScreen();
+
+            //ViewManager.CloseSplashScreen();
+            //this.MainWindow = new MySplashScreen();
+            //this.MainWindow.Show();
         }
 
     }

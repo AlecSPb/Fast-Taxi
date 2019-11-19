@@ -69,7 +69,6 @@ C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\ro\Xceed.Wpf.AvalonDock.resource
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\LoginPage.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\MainMap.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\SplashScreen.g.cs
@@ -92,11 +91,8 @@ D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControl
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlSignUp.g.cs
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\UserControls\UserControlSignUp.baml
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
-C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\PlaceHolderTextBox.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlLogin.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlSignUp.g.cs
-C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\PlaceHolderTextBox.baml
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlLogin.baml
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlSignUp.baml
 D:\Visual Studio files\C# WPF\Exam\Babat Taxi\bin\Debug\Autofac.dll
@@ -160,3 +156,11 @@ D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControl
 D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlCardInfo.baml
 D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlMap.g.cs
 D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlMap.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\AutoClosingMessageBox.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Autofac.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Autofac.pdb
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\Autofac.xml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlCardInfo.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlMap.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlCardInfo.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlMap.baml
