@@ -164,3 +164,4 @@ C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlCardInfo
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlMap.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlCardInfo.baml
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlMap.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache

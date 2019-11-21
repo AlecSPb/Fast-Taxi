@@ -165,7 +165,7 @@ namespace Babat_Taxi.ViewModels
         }
         private void AboutCommandExecute(object obj)
         {
-            MessageBox.Show("Ulvi Bahir Production\nVersion - V1.0\nContact: ubashirov@outlook.com\nCopyright © 2019", "About", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Ulvi Bashir Production\nVersion - V1.0\nContact: ubashirov@outlook.com\nCopyright © 2019", "About", MessageBoxButton.OK, MessageBoxImage.Information);
 
         }
         private void LogOutCommandExecute(object obj)

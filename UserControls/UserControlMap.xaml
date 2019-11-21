@@ -12,9 +12,37 @@
         <!-- I can use provider binding, works but shows error -->
         <map:Map Name="RoadMap" CredentialsProvider="Ao_jQSDX1s9uPT2kRQF7n1gALuQymIe2AgPyUVwQUq8i4Sa1m-E1GJrrH995z2ND"
                  Center="40.409264, 49.867092" ZoomLevel="12" >
+            <map:MapItemsControl Name="ControlMap" ItemsSource="{Binding BusInfos}">
+                <map:MapItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <map:Pushpin Location="{Binding MyLocation}">
 
+                            <Image ></Image>
+
+                        </map:Pushpin>
+                        
+
+                    </DataTemplate>
+                </map:MapItemsControl.ItemTemplate>
+            </map:MapItemsControl>
+            
+            
+            
+            
+            
             <Grid>
-              
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="7*"/>
+                </Grid.RowDefinitions>
+
+                <TextBox Grid.Row="1" Padding="2,0,0,0"   materialDesign:HintAssist.Hint="From" Text="{Binding EmailboxLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  Width="450" Height="40" FontSize="20" 
+                                       BorderBrush="Gray"  Background="White" BorderThickness="2" Foreground="DarkGray"/>
+                <TextBox Grid.Row="2" Padding="2,0,0,0" materialDesign:HintAssist.Hint="To" Text="{Binding EmailboxLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmaill"  Width="450" Height="40" FontSize="20" 
+                                       BorderBrush="Gray"  Background="White" BorderThickness="2" Foreground="DarkGray"/>
+
             </Grid>
         </map:Map>
     </Grid>
