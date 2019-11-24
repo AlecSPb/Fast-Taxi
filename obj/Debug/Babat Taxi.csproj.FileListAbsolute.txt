@@ -165,3 +165,8 @@ C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlMap.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlCardInfo.baml
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlMap.baml
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Babat Taxi.csprojAssemblyReference.cache
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\BingMapsRESTToolkit.dll
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\BingMapsRESTToolkit.pdb
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\BingMapsRESTToolkit.xml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\DragPin.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\DragPin.baml

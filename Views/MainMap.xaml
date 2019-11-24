@@ -82,12 +82,10 @@
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="Black">BABAT TAXI</TextBlock>
         </Grid>
 
-        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#4fe0c6">
-            <Grid.Effect>
-                <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
-            </Grid.Effect>
+        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#4CD6BD">
+            
             <StackPanel>
-                <Grid Height="60" Background="#4fe0c6" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,190">
+                <Grid Height="60" Background="#4CD6BD" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,190">
                     <Grid.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>

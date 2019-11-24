@@ -8,8 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/loginlogo.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/maplogo.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/splashlogo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/finish.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/start.png")]
 
 
