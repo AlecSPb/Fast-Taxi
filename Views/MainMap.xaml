@@ -71,8 +71,8 @@
                 <!--<TextBlock Text="Help" VerticalAlignment="Center" FontSize="16" Foreground="Black"/>-->
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="White">
                     <StackPanel Width="150">
-                        <Button Content="Settings" Command="{Binding SettingsCommand}" CommandParameter="{Binding ElementName=ListViewMenu}"/>
-                        <Button Content="Account" Command="{Binding AccountCommand}"/>
+                        
+                        <Button Content="Account" Command="{Binding SettingsCommand}" CommandParameter="{Binding ElementName=ListViewMenu}"/>
                         <Button Content="About" Command="{Binding AboutCommand}"/>
                         <Separator/>
                         <Button Content="Logout" Command="{Binding LogOutCommand}"/>
@@ -106,15 +106,15 @@
                     <ListViewItem x:Name="ItemMap" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Earth" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="Map" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemHistory" Height="60">
+                    <!--<ListViewItem x:Name="ItemHistory" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="History" Height="25" Width="25" Margin="10"/>
                             <TextBlock Text="Ride History" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
-                    </ListViewItem>
+                    </ListViewItem>-->
                     
                     <ListViewItem x:Name="ItemFeedback" Height="60">
                         <StackPanel Orientation="Horizontal">

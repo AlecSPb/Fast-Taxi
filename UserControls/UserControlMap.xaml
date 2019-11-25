@@ -13,12 +13,25 @@
             <Image Source="../Images/start.png"></Image>
         </ControlTemplate>
 
-        <Style TargetType="map:Pushpin">
-            <Setter Property="ContentTemplate">
+
+
+
+        <ControlTemplate x:Key="Pushpin">
+            <Ellipse Width="20" Height="20">
+                <Ellipse.Fill>
+                    <SolidColorBrush Color="CadetBlue"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </ControlTemplate>
+
+
+
+        <Style x:Key="StartPushpin" TargetType="map:Pushpin">
+            <Setter Property="Template">
                 <Setter.Value>
-                    <DataTemplate>
-                        <Image Source="../Images/start.png" Width="20" Height="20"></Image>
-                    </DataTemplate>
+                    <ControlTemplate TargetType="map:Pushpin">
+                        <Image Source="../Images/start.png"></Image>
+                    </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
@@ -29,6 +42,13 @@
         <!-- I can use provider binding, works but shows error -->
         <map:Map MouseDoubleClick="RoadMap_MouseDoubleClick" Name="RoadMap" CredentialsProvider="Ao_jQSDX1s9uPT2kRQF7n1gALuQymIe2AgPyUVwQUq8i4Sa1m-E1GJrrH995z2ND"
                  Center="40.409264, 49.867092" ZoomLevel="12" >
+            <map:MapItemsControl ItemsSource="{Binding BusInfos}">
+                <map:MapItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <map:Pushpin Location="{Binding MyLocation}"/>
+                    </DataTemplate>
+                </map:MapItemsControl.ItemTemplate>
+            </map:MapItemsControl>
         </map:Map>
 
         <Grid>
@@ -47,6 +67,10 @@
             
             <Button Grid.Row="1" Grid.Column="2" x:Name="Reset"  Height="60" Width="60" Margin="0,0,50,0"  HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  BorderBrush="DarkGray" BorderThickness="3" Foreground="Black" Click="Reset_Click">
                 <materialDesign:PackIcon Kind="Restart" Height="25" Width="25" Margin="10"/>
+            </Button>
+
+            <Button Grid.Row="2" Grid.Column="1" x:Name="TakeRide"  Height="70" Width="70"  HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"   BorderBrush="DarkGray" BorderThickness="3" Foreground="Black" Click="TakeRide_Click">
+                <materialDesign:PackIcon Kind="StarThreePoints" Height="40" Width="40"/>
             </Button>
 
         </Grid>

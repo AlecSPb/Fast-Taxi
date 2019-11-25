@@ -1,0 +1,65 @@
+﻿<Window x:Class="Babat_Taxi.Views.FeedbackView"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Babat_Taxi.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Title="SplashScreen" Height="300" Width="500"
+        Icon="../Images/splashLogo.png">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/DictionaryLogin.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+
+                <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#4fe0c6"/>
+                <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#4fe0c6"/>
+                <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#4fe0c6"/>
+                <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#4fe0c6"/>
+                <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#4fe0c6"/>
+                <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#4fe0c6"/>
+            
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource RightSidePanelGradient}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="148*"/>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="47*"/>
+
+
+            <RowDefinition Height="auto" MinHeight="10"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="191*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Height="54" Margin="51,58,83,36"  Grid.ColumnSpan="2" Width="366">
+            
+            Please leave feedback
+       
+        </TextBlock>
+        
+        <TextBlock Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Height="54" Padding="10,0,10,10" Width="282" Grid.Row="1">
+            About your last ride
+        </TextBlock>
+
+        <TextBox Margin="10" Grid.Column="0" Grid.Row="2"  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailboxLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  FontSize="15" 
+                                       BorderBrush="White"  Background="Transparent" BorderThickness="0,0,0,2" Foreground="DarkGray"/>
+
+        <Button Grid.Row="2" Grid.Column="1" x:Name="SendBtn"  Height="40" Width="40" Click="SendBtn_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"   BorderBrush="DarkGray" BorderThickness="3" Foreground="Black">
+            <materialDesign:PackIcon Kind="Send" Height="20" Width="20"/>
+        </Button>
+
+    </Grid>
+</Window>

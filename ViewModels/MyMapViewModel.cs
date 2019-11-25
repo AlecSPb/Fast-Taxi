@@ -212,8 +212,9 @@ namespace Babat_Taxi.ViewModels
 
                     break;
                 case "ItemFeedback":
-                    UserControlPanel.Children.Clear();
-
+                    //UserControlPanel.Children.Clear();
+                    ViewManager.ShowFeedbackView();
+                    ListViewPanel.SelectedIndex = 0;
                     break;
 
                 default:

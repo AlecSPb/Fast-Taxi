@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using Babat_Taxi.Models;
+using Babat_Taxi.Services;
 using Microsoft.Maps.MapControl.WPF;
 
 
@@ -23,6 +27,7 @@ namespace Babat_Taxi.UserControls
     /// </summary>
     public partial class UserControlMap : UserControl
     {
+        
         public UserControlMap()
         {
             InitializeComponent();
@@ -162,7 +167,21 @@ namespace Babat_Taxi.UserControls
                 //Convert the mouse coordinates to a locatoin on the map
                 Location pinLocation = RoadMap.ViewportPointToLocation(mousePosition);
 
+
+
                 Pushpin pin = new Pushpin();
+
+                if(Counter == 0)
+                {
+                    pin.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/start.png", UriKind.Relative)));
+                } else if(Counter == 1)
+                {
+                    pin.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/finish.png", UriKind.Relative)));
+
+                }
+
+
+
                 pin.Location = pinLocation;
                 RoadMap.Children.Add(pin);
                 RoadMap.LocationToViewportPoint(pin.Location);
@@ -188,8 +207,14 @@ namespace Babat_Taxi.UserControls
             RoadMap.Children.Clear();
         }
 
-
-       
-
+        private void TakeRide_Click(object sender, RoutedEventArgs e)
+        {
+            if (Counter == 2)
+            {
+                ViewManager.ShowTakeRideView();
+                Counter = 0;
+                RoadMap.Children.Clear();
+            }
+        }
     }
 }

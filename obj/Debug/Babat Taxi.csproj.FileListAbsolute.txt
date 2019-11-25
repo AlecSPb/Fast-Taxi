@@ -170,3 +170,14 @@ D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\BingMapsRESTToolkit.pdb
 D:\Visual Studio files\C# WPF\Exam\babat-taxi\bin\Debug\BingMapsRESTToolkit.xml
 D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\DragPin.g.cs
 D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\DragPin.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\BingMapsRESTToolkit.dll
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\BingMapsRESTToolkit.pdb
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\bin\Debug\BingMapsRESTToolkit.xml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\DragPin.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlAccountEdit.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\DragPin.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\UserControls\UserControlAccountEdit.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\TakeRideView.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\TakeRideView.baml
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\FeedbackView.g.cs
+C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\FeedbackView.baml

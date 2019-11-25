@@ -193,7 +193,6 @@ namespace Babat_Taxi.UserControls
         #region INotifyPropertyChanged Members
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public event PropertyChangingEventHandler PropertyChanging;
 
         internal void OnPropertyChanged(string propertyName)
         {

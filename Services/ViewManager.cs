@@ -13,13 +13,10 @@ namespace Babat_Taxi.Services
         private static LoginPage loginPage;
         private static MainMap mainMap;
         private static MySplashScreen mySplashScreen;
-
+        private static TakeRideView TakeRideView;
+        private static FeedbackView FeedbackView;
         public ViewManager()
         {
-            //loginPage = new LoginPage();
-            //mainMap = new MainMap();
-            //mySplashScreen = new MySplashScreen();
-
         }
         public static void ShowSplashScreen()
         {
@@ -31,6 +28,26 @@ namespace Babat_Taxi.Services
             mySplashScreen.Close();
         }
 
+
+        public static void ShowTakeRideView()
+        {
+            TakeRideView = new TakeRideView();
+            TakeRideView.ShowDialog();
+        }
+        public static void CloseTakeRideView()
+        {
+            TakeRideView.Close();
+        }
+
+        public static void ShowFeedbackView()
+        {
+            FeedbackView = new FeedbackView();
+            FeedbackView.ShowDialog();
+        }
+        public static void CloseFeedbackView()
+        {
+            FeedbackView.Close();
+        }
 
         public static void ShowLoginPage()
         {

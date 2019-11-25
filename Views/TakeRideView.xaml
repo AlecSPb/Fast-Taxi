@@ -1,0 +1,53 @@
+﻿<Window x:Class="Babat_Taxi.Views.TakeRideView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Babat_Taxi.Views"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Title="SplashScreen" Height="300" Width="500"
+        Icon="../Images/splashLogo.png">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/DictionaryLogin.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource RightSidePanelGradient}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="47*"/>
+
+
+            <RowDefinition Height="auto" MinHeight="10"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="191*"/>
+            <ColumnDefinition Width="59*"/>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Text="Your Ride Will end Soon" Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Height="54" Margin="32,56,64,10"  Grid.ColumnSpan="2" Width="404"></TextBlock>
+        <TextBlock Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Height="40" Margin="34,16,66,2" Width="282" Grid.Row="1">
+            Please Wait . . .
+        </TextBlock>
+        <TextBlock Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Height="40" Margin="34,12,10,46" Width="338" Grid.Row="2" Grid.RowSpan="2">
+            Your bill has been paid by our company :D
+        </TextBlock>
+        <!--<TextBlock Foreground="White"  FontWeight="UltraLight" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="12" Height="29" Margin="198,0,52,5" Width="132" Grid.Row="2">
+            Copyright © 2019
+
+        </TextBlock>-->
+
+
+        <ProgressBar BorderBrush="DarkGray" x:Name="Progbar" Grid.Row="3" Minimum="0" Maximum="100" Background="{StaticResource RightSidePanelGradient}" Style="{x:Null}" Foreground="{StaticResource RightSidePanelGradient}" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
