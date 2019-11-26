@@ -181,3 +181,9 @@ C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\TakeRideView.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\TakeRideView.baml
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\FeedbackView.g.cs
 C:\Users\Bxsi_nlu2\Desktop\babat-taxi\obj\Debug\Views\FeedbackView.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlAccountEdit.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\FeedbackView.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\TakeRideView.g.cs
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\UserControls\UserControlAccountEdit.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\FeedbackView.baml
+D:\Visual Studio files\C# WPF\Exam\babat-taxi\obj\Debug\Views\TakeRideView.baml

@@ -15,6 +15,7 @@ namespace Babat_Taxi.Services
         private static MySplashScreen mySplashScreen;
         private static TakeRideView TakeRideView;
         private static FeedbackView FeedbackView;
+       
         public ViewManager()
         {
         }
@@ -31,12 +32,17 @@ namespace Babat_Taxi.Services
 
         public static void ShowTakeRideView()
         {
+           
             TakeRideView = new TakeRideView();
-            TakeRideView.ShowDialog();
+            TakeRideView.Show();
         }
         public static void CloseTakeRideView()
         {
             TakeRideView.Close();
+        }
+        public static bool IsOpenTakeRideView()
+        {
+           return TakeRideView.IsEnabled;
         }
 
         public static void ShowFeedbackView()

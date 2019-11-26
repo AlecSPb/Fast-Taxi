@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Babat_Taxi.Views"
         mc:Ignorable="d"
-        WindowStyle="None"
-        AllowsTransparency="True"
+        WindowStyle="ToolWindow"
         WindowStartupLocation="CenterScreen"
-        Title="SplashScreen" Height="300" Width="500"
+        Title="Ride" Height="314.375" Width="550"
+      MaxHeight="314.375" MaxWidth="550"
+        MinHeight="314.375" MinWidth="550"
         Icon="../Images/splashLogo.png">
     <Window.Resources>
         <ResourceDictionary>
@@ -48,6 +49,6 @@
         </TextBlock>-->
 
 
-        <ProgressBar BorderBrush="DarkGray" x:Name="Progbar" Grid.Row="3" Minimum="0" Maximum="100" Background="{StaticResource RightSidePanelGradient}" Style="{x:Null}" Foreground="{StaticResource RightSidePanelGradient}" Grid.ColumnSpan="2"/>
+        <!--<ProgressBar BorderBrush="DarkGray" x:Name="Progbar" Grid.Row="3" Minimum="0" Maximum="100" Background="{StaticResource RightSidePanelGradient}" Style="{x:Null}" Foreground="{StaticResource RightSidePanelGradient}" Grid.ColumnSpan="2"/>-->
     </Grid>
 </Window>

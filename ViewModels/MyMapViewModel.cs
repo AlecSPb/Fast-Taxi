@@ -119,6 +119,21 @@ namespace Babat_Taxi.ViewModels
 
             GetListViewCommand = new MyCommand(GetListViewComamndExecute, GetListViewComamndCanExecute);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
 

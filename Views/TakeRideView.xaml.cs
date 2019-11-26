@@ -29,22 +29,25 @@ namespace Babat_Taxi.Views
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 200);
             timer.Tick += Timer_Tick;
-            timer.Start();
+           // timer.Start();
             InitializeComponent();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            if (Progbar.Value == 100)
-            {
-                timer.Stop();
-                ViewManager.CloseTakeRideView();
-                ViewManager.ShowFeedbackView();
 
 
-            }
-            else
-                Progbar.Value += 1;
+
+            //if (Progbar.Value == 100)
+            //{
+            //    timer.Stop();
+            //    ViewManager.CloseTakeRideView();
+            //    ViewManager.ShowFeedbackView();
+
+
+            //}
+            //else
+            //    Progbar.Value += 1;
 
         }
     }

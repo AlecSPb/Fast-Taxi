@@ -30,17 +30,59 @@ namespace Babat_Taxi.UserControls
         
         public UserControlMap()
         {
+            pinCar = new Pushpin();
+            //pinCar.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/mapLogo.png", UriKind.Relative)));
+            pinCar.Background = new SolidColorBrush(Colors.Black);
             InitializeComponent();
             Counter = 0;
+            CounterRideTaxi = 0;
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
+            timer.Tick += Timer_Tick;
         }
 
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (Tmplocs != null)
+            {
 
+                if (Tmplocs[CounterRideTaxi] != Tmplocs[Tmplocs.Count - 1])
+                {
+                    pinCar.Location = Tmplocs[CounterRideTaxi];
+                    CounterRideTaxi++;
+                }
+                else
+                {
+                    timer.Stop();
+                    ViewManager.CloseTakeRideView();
+                    ViewManager.ShowFeedbackView();
+
+                    Counter = 0;
+                    CounterRideTaxi = 0;
+                    RoadMap.Children.Clear();
+                    Tmplocs = null;
+                }
+
+
+            }
+
+
+        }
+
+        Pushpin pinCar;
+        private int CounterRideTaxi;
+        private DispatcherTimer timer;
         public int Counter { get; set; }
         private DragPin StartPin;
         private DragPin EndPin;
         private MapLayer RouteLayer;
         private string SessionKey;
         Location tmp;
+        LocationCollection Tmplocs;
+
+        
+
+
         private void RoadMap_Loaded(Location loc1, Location loc2 = null)
         {
             RoadMap.CredentialsProvider.GetCredentials((c) =>
@@ -75,9 +117,6 @@ namespace Babat_Taxi.UserControls
                 UpdateRoute(null);
             });
         }
-
-
-
         private async void UpdateRoute(Location loc)
         {
             RouteLayer.Children.Clear();
@@ -111,7 +150,7 @@ namespace Babat_Taxi.UserControls
                 var route = response.ResourceSets[0].Resources[0] as BingMapsRESTToolkit.Route;
 
                 var locs = new LocationCollection();
-
+                Tmplocs = locs;
                 for (var i = 0; i < route.RoutePath.Line.Coordinates.Length; i++)
                 {
                     locs.Add(new Location(route.RoutePath.Line.Coordinates[i][0], route.RoutePath.Line.Coordinates[i][1]));
@@ -143,16 +182,6 @@ namespace Babat_Taxi.UserControls
 
             return icon;
         }
-
-
-
-
-
-
-
-
-
-
         private void RoadMap_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (Counter < 2)
@@ -174,10 +203,11 @@ namespace Babat_Taxi.UserControls
                 if(Counter == 0)
                 {
                     pin.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/start.png", UriKind.Relative)));
+                    //pin.Background = new SolidColorBrush(Colors.Green);
                 } else if(Counter == 1)
                 {
                     pin.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/finish.png", UriKind.Relative)));
-
+                    //pin.Background = new SolidColorBrush(Colors.Red);
                 }
 
 
@@ -195,6 +225,7 @@ namespace Babat_Taxi.UserControls
                 else if (Counter == 1)
                 {
                     RoadMap_Loaded(tmp,pinLocation);
+                    pinCar.Location = tmp;
                     Counter++;
                 }
                 
@@ -204,16 +235,20 @@ namespace Babat_Taxi.UserControls
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
             Counter = 0;
+            CounterRideTaxi = 0;
+
             RoadMap.Children.Clear();
+            Tmplocs = null;
         }
 
         private void TakeRide_Click(object sender, RoutedEventArgs e)
         {
             if (Counter == 2)
             {
+                RoadMap.Children.Add(pinCar);
+                RoadMap.LocationToViewportPoint(pinCar.Location);
                 ViewManager.ShowTakeRideView();
-                Counter = 0;
-                RoadMap.Children.Clear();
+                timer.Start();
             }
         }
     }

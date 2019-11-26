@@ -54,7 +54,7 @@
             About your last ride
         </TextBlock>
 
-        <TextBox Margin="10" Grid.Column="0" Grid.Row="2"  materialDesign:HintAssist.Hint="Email" Text="{Binding EmailboxLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  FontSize="15" 
+        <TextBox Margin="10" Grid.Column="0" Grid.Row="2"  materialDesign:HintAssist.Hint="Write some feedback" Text="{Binding EmailboxLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  x:Name="txtEmail"  FontSize="15" 
                                        BorderBrush="White"  Background="Transparent" BorderThickness="0,0,0,2" Foreground="DarkGray"/>
 
         <Button Grid.Row="2" Grid.Column="1" x:Name="SendBtn"  Height="40" Width="40" Click="SendBtn_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"   BorderBrush="DarkGray" BorderThickness="3" Foreground="Black">
