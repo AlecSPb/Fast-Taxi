@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,8 +19,7 @@ using System.Windows.Threading;
 using Babat_Taxi.Models;
 using Babat_Taxi.Services;
 using Microsoft.Maps.MapControl.WPF;
-
-
+using Newtonsoft.Json;
 
 namespace Babat_Taxi.UserControls
 {
@@ -36,9 +37,30 @@ namespace Babat_Taxi.UserControls
             InitializeComponent();
             Counter = 0;
             CounterRideTaxi = 0;
+            httpCheck = false;
+
+
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
             timer.Tick += Timer_Tick;
+
+            timerFaker = new DispatcherTimer();
+            timerFaker.Interval = new TimeSpan(0, 0, 0, 0, 3000);
+            timerFaker.Tick += TimerFaker_Tick;
+            timerFaker.Start();
+
+
+
+            carCount = 20;
+
+
+            SetFake();
+        }
+
+        private void TimerFaker_Tick(object sender, EventArgs e)
+        {
+            //if(Counter == 0)
+            //Reset_Click(new object(), new RoutedEventArgs());
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -69,9 +91,13 @@ namespace Babat_Taxi.UserControls
 
         }
 
+
+        private bool httpCheck;
         Pushpin pinCar;
         private int CounterRideTaxi;
         private DispatcherTimer timer;
+        private DispatcherTimer timerFaker;
+        private dynamic data;
         public int Counter { get; set; }
         private DragPin StartPin;
         private DragPin EndPin;
@@ -79,7 +105,7 @@ namespace Babat_Taxi.UserControls
         private string SessionKey;
         Location tmp;
         LocationCollection Tmplocs;
-
+        int carCount;
         
 
 
@@ -238,6 +264,7 @@ namespace Babat_Taxi.UserControls
             CounterRideTaxi = 0;
 
             RoadMap.Children.Clear();
+            SetFake();
             Tmplocs = null;
         }
 
@@ -251,5 +278,50 @@ namespace Babat_Taxi.UserControls
                 timer.Start();
             }
         }
+
+
+        public void SetFake()
+        {
+            if (!httpCheck)
+            {
+                HttpClient http = new HttpClient();
+                var response = http.GetAsync(@"https://www.bakubus.az/az/ajax/apiNew1").Result;
+                data = JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+            }
+            httpCheck = true;
+
+            int a = 0;
+            foreach (var item in data["BUS"])
+            {
+                if(carCount != a)
+                {
+                    Pushpin FakePushPin = new Pushpin();
+                    FakePushPin.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/mapLogo.png", UriKind.Relative)));
+                    FakePushPin.Location = new Location(
+                                double.Parse(item["@attributes"]["LATITUDE"].ToString().Replace(',', '.'), CultureInfo.InvariantCulture),
+                                double.Parse(item["@attributes"]["LONGITUDE"].ToString().Replace(',', '.'), CultureInfo.InvariantCulture));
+
+
+
+
+
+
+                    RoadMap.Children.Add(FakePushPin);
+                    RoadMap.LocationToViewportPoint(FakePushPin.Location);
+                    a++;
+                }
+                else
+                {
+                    break;
+                }
+                
+
+            }
+
+
+        }
+
+
+
     }
 }
