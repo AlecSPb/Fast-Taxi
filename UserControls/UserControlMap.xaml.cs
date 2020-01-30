@@ -228,11 +228,11 @@ namespace Babat_Taxi.UserControls
 
                 if(Counter == 0)
                 {
-                    pin.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/start.png", UriKind.Relative)));
+                    pin.Background = new SolidColorBrush(Colors.Red); //new ImageBrush(new BitmapImage(new Uri(@"../../Images/start.png", UriKind.Relative)));
                     //pin.Background = new SolidColorBrush(Colors.Green);
                 } else if(Counter == 1)
                 {
-                    pin.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/finish.png", UriKind.Relative)));
+                    pin.Background = new SolidColorBrush(Colors.Green); // new ImageBrush(new BitmapImage(new Uri(@"../../Images/finish.png", UriKind.Relative)));
                     //pin.Background = new SolidColorBrush(Colors.Red);
                 }
 
@@ -296,7 +296,7 @@ namespace Babat_Taxi.UserControls
                 if(carCount != a)
                 {
                     Pushpin FakePushPin = new Pushpin();
-                    FakePushPin.Background = new ImageBrush(new BitmapImage(new Uri(@"../../Images/mapLogo.png", UriKind.Relative)));
+                    FakePushPin.Background = new SolidColorBrush(Colors.Yellow); //new ImageBrush(new BitmapImage(new Uri(@"../../Images/mapLogo.png", UriKind.Relative)));
                     FakePushPin.Location = new Location(
                                 double.Parse(item["@attributes"]["LATITUDE"].ToString().Replace(',', '.'), CultureInfo.InvariantCulture),
                                 double.Parse(item["@attributes"]["LONGITUDE"].ToString().Replace(',', '.'), CultureInfo.InvariantCulture));

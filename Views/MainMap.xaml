@@ -79,7 +79,7 @@
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="Black">BABAT TAXI</TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="Black">FAST TAXI</TextBlock>
         </Grid>
 
         <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#4CD6BD">

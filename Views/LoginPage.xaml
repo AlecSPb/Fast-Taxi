@@ -51,7 +51,7 @@
                             <Line X1="300" Stroke="White"
                               HorizontalAlignment="Center" VerticalAlignment="Bottom" 
                               StrokeThickness="2" Margin="0,0,0,10"/>
-                            <Label Content="BABAT TAXI"
+                            <Label Content="FAST TAXI"
                                VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                                FontSize="70"  FontWeight="Light" Foreground="White"/>
                             <Line X1="300" Stroke="White"
